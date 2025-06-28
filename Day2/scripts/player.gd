@@ -60,14 +60,14 @@ func shoot_laser():
 	var l = laser_scene.instantiate()
 	l.global_position = muzzle.global_position
 	l.rotation = rotation
-	emit_signal("laser_shot", l)
+	laser_shot.emit(l)
 
 func die():
 	if alive==true:
 		alive = false
 		sprite.visible = false
 		cshape.set_deferred("disabled", true)
-		emit_signal("died")
+		died.emit()
 		
 
 func respawn(pos):
