@@ -1,17 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-[DefaultExecutionOrder(-1)]
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private Ball ball;
-    [SerializeField] private Paddle playerPaddle;
-    [SerializeField] private Paddle computerPaddle;
-    [SerializeField] private Text playerScoreText;
-    [SerializeField] private Text computerScoreText;
+    public Ball ball;
+    public Paddle playerPaddle;
+    public Paddle computerPaddle;
+    public Text player1ScoreText;
+    public Text player2ScoreText;
 
-    private int playerScore;
-    private int computerScore;
+    private int _player1Score;
+    private int _player2Score;
 
     private void Start()
     {
@@ -20,15 +19,13 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)) {
+        if (Input.GetKeyDown(KeyCode.R)) 
             NewGame();
-        }
     }
 
     public void NewGame()
     {
-        SetPlayerScore(0);
-        SetComputerScore(0);
+        _player1Score = _player2Score = 0;
         NewRound();
     }
 
@@ -38,37 +35,25 @@ public class GameManager : MonoBehaviour
         computerPaddle.ResetPosition();
         ball.ResetPosition();
 
+        player1ScoreText.text = _player1Score.ToString();
+        player2ScoreText.text = _player2Score.ToString();
+
         CancelInvoke();
         Invoke(nameof(StartRound), 1f);
     }
 
     private void StartRound()
     {
-        ball.AddStartingForce();
+        ball.StartGame();
     }
 
-    public void OnPlayerScored()
+    public void OnScored(Paddle.Player player)
     {
-        SetPlayerScore(playerScore + 1);
+        if (player == Paddle.Player.Player1)
+            _player1Score++;
+        else
+            _player2Score++;
+
         NewRound();
     }
-
-    public void OnComputerScored()
-    {
-        SetComputerScore(computerScore + 1);
-        NewRound();
-    }
-
-    private void SetPlayerScore(int score)
-    {
-        playerScore = score;
-        playerScoreText.text = score.ToString();
-    }
-
-    private void SetComputerScore(int score)
-    {
-        computerScore = score;
-        computerScoreText.text = score.ToString();
-    }
-
 }

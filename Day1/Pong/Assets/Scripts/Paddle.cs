@@ -1,47 +1,46 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public abstract class Paddle : MonoBehaviour
+public class Paddle : MonoBehaviour
 {
-    protected Rigidbody2D rb;
-
-    public float speed = 8f;
-    [Tooltip("Changes how the ball bounces off the paddle depending on where it hits the paddle. The further from the center of the paddle, the steeper the bounce angle.")]
-    public bool useDynamicBounce = false;
-
-    private void Awake()
+    public enum Player
     {
-        rb = GetComponent<Rigidbody2D>();
+        Player1,
+        Player2
     }
 
-    public void ResetPosition()
+    public float speed = 8f;
+    public Player player;
+
+    private void FixedUpdate()
     {
-        rb.velocity = Vector2.zero;
-        rb.position = new Vector2(rb.position.x, 0f);
+        if (player == Player.Player1)
+        {
+            if (Input.GetKey(KeyCode.W))
+                transform.Translate(Vector2.up * (speed * Time.deltaTime));
+            else if (Input.GetKey(KeyCode.S))
+                transform.Translate(Vector2.down * (speed * Time.deltaTime));
+        }
+        else
+        {
+            if (Input.GetKey(KeyCode.UpArrow))
+                transform.Translate(Vector2.up * (speed * Time.deltaTime));
+            else if (Input.GetKey(KeyCode.DownArrow))
+                transform.Translate(Vector2.down * (speed * Time.deltaTime));
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (useDynamicBounce && collision.gameObject.CompareTag("Ball"))
+        if (collision.gameObject.CompareTag("Ball"))
         {
-            Rigidbody2D ball = collision.rigidbody;
-            Collider2D paddle = collision.otherCollider;
-
-            // Gather information about the collision
-            Vector2 ballDirection = ball.velocity.normalized;
-            Vector2 contactDistance = ball.transform.position - paddle.bounds.center;
-            Vector2 surfaceNormal = collision.GetContact(0).normal;
-            Vector3 rotationAxis = Vector3.Cross(Vector3.up, surfaceNormal);
-
-            // Rotate the direction of the ball based on the contact distance
-            // to make the gameplay more dynamic and interesting
-            float maxBounceAngle = 75f;
-            float bounceAngle = contactDistance.y / paddle.bounds.size.y * maxBounceAngle;
-            ballDirection = Quaternion.AngleAxis(bounceAngle, rotationAxis) * ballDirection;
-
-            // Re-apply the new direction to the ball
-            ball.velocity = ballDirection * ball.velocity.magnitude;
+            Rigidbody2D ballRb = collision.rigidbody;
+            ballRb.velocity *= 1.05f;
         }
     }
 
+
+    public void ResetPosition()
+    {
+        transform.position = new Vector2(transform.position.x, 0f);
+    }
 }
