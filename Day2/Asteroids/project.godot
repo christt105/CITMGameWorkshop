@@ -14,6 +14,7 @@ config/name="Asteroids Workshop"
 run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/image="uid://s15ma0tp4y3t"
+config/icon="res://icon.svg"
 
 [display]
 
