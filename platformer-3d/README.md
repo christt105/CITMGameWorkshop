@@ -1,3 +1,7 @@
-# Day 4 - 3D Platformer
+# 3D Platformer (Godot 4)
 
-Based on [Kenney's Starter Kit 3D Platformer](https://github.com/KenneyNL/Starter-Kit-3D-Platformer), modified during the workshop to learn basic 3D movement and jumping in Godot.
+A 3D platformer built using [Kenney's Starter Kit 3D Platformer](https://github.com/KenneyNL/Starter-Kit-3D-Platformer) as a base, extended during the workshop to implement player movement and jumping.
+
+License: MIT
+
+Main workshop repository: [https://github.com/christt105/CITMGameWorkshop](https://github.com/christt105/CITMGameWorkshop)
