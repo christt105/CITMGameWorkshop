@@ -42,3 +42,9 @@ License: MIT
 
 - This repository is for educational purposes only.
 - Projects without explicit licenses are used for workshop purposes and attributed accordingly.
+
+---
+
+## Presentation
+
+You can view the presentation here: [Google Slides](https://docs.google.com/presentation/d/1JLaIByuc94TJuL3XWGsWRPipyOQUfN87R-Oi_ff_Z3w/edit?usp=sharing)
