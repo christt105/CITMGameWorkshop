@@ -14,6 +14,8 @@ header: 'Taller: Crea el teu primer videojoc — CITM·UPC'
 
 Christian Martínez De La Rosa
 
+![h:140px](img/intro/image3.png)
+
 <!-- Slide d'obertura. Presenteu-vos i doneu la benvinguda. -->
 
 ---
@@ -25,6 +27,8 @@ Christian Martínez De La Rosa
 
 > Jugar a videojocs pot ser **diferent** a crear-los.
 
+![h:240px](img/intro/image9.png)
+
 <!-- Trenca-gel. Deixeu que responguin en veu alta, creeu ambient. -->
 
 ---
@@ -33,13 +37,15 @@ Christian Martínez De La Rosa
 
 Coneixeu algun d'aquests?
 
-> 🖼️ *(posa aquí les imatges dels teus jocs favorits)*
+![h:230px](img/intro/image10.png) ![h:230px](img/intro/image8.gif) ![h:230px](img/intro/image15.png)
 
 <!-- Ensenyeu els vostres jocs preferits. Connecteu amb els seus. -->
 
 ---
 
 # Com es fa un videojoc?
+
+![h:300px](img/intro/image13.png)
 
 <!-- Transició cap a la part "teòrica" curta. Pregunta oberta a la classe. -->
 
@@ -73,19 +79,19 @@ Coneixeu algun d'aquests?
 
 > Avui **partirem de zero**. 🙂
 
+![h:200px](img/intro/image6.png) ![h:200px](img/intro/image2.png)
+
 <!-- Mesureu el nivell de la sala. Tranquil·litzeu els qui no han programat mai. -->
 
 ---
 
 # Motors de videojocs
 
-Què són?
+Què són? Programes que ens donen fet allò difícil (física, gràfics, sons...) perquè ens centrem a **crear el joc**.
 
-> Programes que ens donen fet allò difícil (física, gràfics, sons...) perquè ens centrem a **crear el joc**. Avui farem servir **Unity** i **Godot**.
+![h:150px](img/intro/image5.png) ![h:150px](img/intro/image12.png) ![h:150px](img/intro/image1.png)
 
-> 🖼️ *(opcional: logos d'Unity i Godot)*
-
-<!-- Definiu "motor" amb una analogia senzilla (com una cuina ja muntada). -->
+<!-- Definiu "motor" amb una analogia senzilla (com una cuina ja muntada). Avui: Unity i Godot. -->
 
 ---
 
@@ -96,7 +102,7 @@ Què són?
 
 > 🖼️ *(posa aquí una captura del Flappy Bird i una del joc de plataformes 3D)*
 
-<!-- Aquesta és l'única slide canviada respecte a la intro vella (abans: Pong + ????). 2 jocs aquest any. -->
+<!-- Única slide canviada respecte a la intro vella (abans: Pong + ????). Imatges d'aquests 2 jocs disponibles a slides/img/intro si les vols afegir. -->
 
 ---
 

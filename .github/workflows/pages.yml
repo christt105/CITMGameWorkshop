@@ -29,9 +29,10 @@ jobs:
           mkdir -p _site
           for f in slides/dia-*.md; do
             name=$(basename "$f" .md)
-            npx --yes @marp-team/marp-cli@latest "$f" -o "_site/$name.html" --html
+            npx --yes @marp-team/marp-cli@latest "$f" -o "_site/$name.html" --html --allow-local-files
           done
           cp slides/index.html _site/index.html
+          [ -d slides/img ] && cp -r slides/img _site/img || true
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
