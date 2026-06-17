@@ -9,6 +9,15 @@ This year the workshop focuses on **2 games over 4 days** so there is time to le
 
 Both games follow the same "fill in the `TODO`" format: the project is almost finished and students complete the missing pieces, guided step by step.
 
+## ⬇️ Download (students start here)
+
+Get the ready-to-open starter templates from the **[v2026 release](https://github.com/christt105/CITMGameWorkshop/releases/tag/v2026)** — no git needed, just download and open:
+
+- 🐦 **[FlappyBird-2026.zip](https://github.com/christt105/CITMGameWorkshop/releases/download/v2026/FlappyBird-2026.zip)** → open the `FlappyBirdWorkshop` folder with **Unity Hub** (Unity 2022.3 LTS).
+- 🧱 **[Platformer3D-2026.zip](https://github.com/christt105/CITMGameWorkshop/releases/download/v2026/Platformer3D-2026.zip)** → import `project.godot` with **Godot 4.6**.
+
+Each ZIP includes its step-by-step `GUIA.md` inside.
+
 ## This year's games
 
 ### 🐦 Flappy Bird (Unity) — Days 1–2
