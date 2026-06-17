@@ -54,12 +54,12 @@ Un **motor de videojocs**: el programa on muntem el joc.
 
 # Com treballarem avui 🤝
 
-- Ho fem **junts**, pas a pas. Jo ho faig i tu em segueixes.
-- Anem omplint uns trossos marcats amb **`TODO`** (de l'1 al 7).
+- Hi ha trossos marcats amb **`TODO`** (de l'1 al 7). Cada un, **intenta-ho tu primer**!
+- Després ho posem **en comú** i ho fem junts.
 - **Si et quedes enrere** → tens la `GUIA.md` amb tot el codi. No pateixis.
 - **Si acabes abans** → tens **reptes extra** al final. 🚀
 
-<!-- Deixeu clar el triple ritme: junts / GUIA per als que es despengen / reptes per als ràpids. -->
+<!-- "Menys mastegat": que ho provin abans de revelar la solució. Triple ritme: intentar-ho / GUIA si s'encallen / reptes per als ràpids. -->
 
 ---
 

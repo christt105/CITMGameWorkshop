@@ -9,77 +9,81 @@ header: 'Taller: Crea el teu primer videojoc — CITM·UPC'
 <!-- _header: '' -->
 
 # Dia 2 🎨
-## Fes que el Flappy Bird sigui TEU
+## Millora i fes teu el Flappy Bird
 
-Mateix joc, mil versions diferents.
+Avui afegim **funcions noves** i el fem **únic**.
 
-<!-- Recordeu el dia 1: tots tenim el mateix joc. Avui cadascú el fa únic. Avui NO anem tots al mateix ritme: cadascú tria. -->
+<!-- Continuem el projecte del dia 1. Avui dues parts: afegir funcions + personalitzar. -->
 
 ---
 
 # Repàs ràpid del dia 1
 
-- L'ocell **salta** quan premem.
-- Les canonades **es mouen** i **es creen** soles.
+- L'ocell **salta**, les canonades **es mouen** i **es creen** soles.
 - Puntuem i morim amb les **etiquetes**.
 
-> Tothom té el joc funcionant? Si no, mirem la `GUIA.md` i ho posem al dia.
+> No vas acabar el dia 1? Baixa **`FlappyBird-Dia2.zip`** (ja té el dia 1 fet) i continua des d'aquí. Ningú es queda enrere.
 
-<!-- Assegureu-vos que tothom parteix d'un joc jugable abans de personalitzar. -->
-
----
-
-# Avui tries TU 🧭
-
-No anem tots iguals. **Tria el teu camí** i fes-lo créixer.
-
-🟢 Fàcil · 🟡 Mitjà · 🔴 Repte
-
-> Comença pel que et faci més il·lusió. **No cal fer-ho tot.**
-
-<!-- Concepte del dia: autonomia. Cadascú avança fins on vulgui/pugui. -->
+<!-- IMPORTANT: el ZIP "Dia 2" és la xarxa de seguretat. Que els endarrerits el facin servir per anar tots a una. -->
 
 ---
 
-# 🟢 Nivell fàcil
+# Com serà el dia d'avui
 
-- Canvia el **dibuix de l'ocell**.
-- Canvia el **fons** i el **color de les canonades**.
-- Fes l'ocell més **lleuger o pesat**.
-- Fes les canonades més **ràpides o lentes**.
+**1a part — Afegir funcions** 🛠️
+Fem el joc més **complet**: dificultat, escut, monedes...
 
-<!-- Tot des de l'Inspector o arrossegant imatges. Punt d'entrada per a tothom, sense codi. -->
+**2a part — Personalitzar** 🎨
+El fem **teu**: dibuixos, sons, ambient.
 
----
+> Acabem amb un **showcase**: ensenyem els jocs a la classe.
 
-# 🟡 Nivell mitjà
-
-- Que el joc es faci **més difícil** com més punts tens.
-- Afegeix **sons**: saltar, puntuar, xocar.
-- Afegeix **partícules** quan sumes un punt.
-
-> Aquí toquem una mica més el projecte. La `GUIA.md` t'ajuda.
-
-<!-- Acompanyeu qui s'hi atreveixi. Pistes a la guia. -->
+<!-- ~1.5h funcions, ~1-1.5h personalització, ~15 min showcase. Adapteu al ritme. -->
 
 ---
 
-# 🔴 Reptes
+# 1a part · Menú de funcions 🛠️
 
-- **Power-up d'escut:** xocar una vegada sense morir.
-- **Mode lent:** una tecla que alenteixi el temps un moment.
-- **Monedes** que donen punts extra.
-- **El teu propi invent!** 💡
+Tria'n unes quantes (no cal totes). Tens el codi a `FUNCIONS.md`.
 
-<!-- Per als ràpids. Reptes oberts: que pensin la solució (amb ajuda puntual). -->
+- 🔥 **Dificultat creixent** (més punts → més difícil)
+- 🛡️ **Power-up d'escut** (xoca una vegada sense morir)
+- 🪙 **Monedes** que donen punts extra
+- 🐢 **Mode lent** amb una tecla
+
+<!-- Aquestes són mecàniques de veritat, no només estètica. Acompanyeu amb FUNCIONS.md. -->
+
+---
+
+# 1a part · Encara més 🛠️
+
+- 🏅 **Medalles** segons la puntuació final
+- 🌄 **Fons en moviment** (parallax)
+- ✨ **Juice**: partícules, sons, sacsejada en morir
+
+> Pregunta'm la que vulguis muntar: tinc el codi preparat.
+
+<!-- Reserveu temps per a aquestes als qui van ràpids. Són un bon "repte extra". -->
+
+---
+
+# 2a part · Fes-lo teu 🎨
+
+- Canvia el **dibuix de l'ocell**, el **fons**, les **canonades**.
+- Posa la teva **música** o sons.
+- Dona-li un **tema**: nit, espai, el teu animal favorit...
+
+> Pensa: com vull que **se senti** el meu joc?
+
+<!-- La part creativa. Doneu llibertat total. Inspireu amb exemples. -->
 
 ---
 
 # Idees si no saps per on començar
 
-- Un Flappy Bird de **nit** 🌙
+- Un Flappy Bird de **nit** 🌙 o a l'**espai** 🚀
 - L'ocell és el teu **animal favorit** 🐶
-- Tema **espai**, **submarí**, **píxel art**...
+- Estil **píxel art** o **dibuix a mà** ✏️
 - Música del teu joc preferit 🎶
 
 <!-- Per desbloquejar els qui es queden mirant el full en blanc. -->
@@ -88,13 +92,13 @@ No anem tots iguals. **Tria el teu camí** i fes-lo créixer.
 
 # Ara et toca a tu 🎮
 
-- Tria **2 o 3 coses** i fes-les.
+- **1r** afegeix 2-3 funcions del menú.
+- **Després** personalitza'l al teu gust.
 - Prova sovint amb ▶️ **Play**.
-- Pensa: com vull que **se senti** el meu joc?
 
 > És **difícil** fer jocs. Equivocar-se és part del joc.
 
-<!-- Volteu i animeu. Feu fotos dels jocs per al showcase. -->
+<!-- Volteu, resoleu dubtes amb FUNCIONS.md i GUIA.md. Feu fotos per al showcase. -->
 
 ---
 
@@ -104,7 +108,7 @@ No anem tots iguals. **Tria el teu camí** i fes-lo créixer.
 
 Ensenyem els jocs a la classe!
 
-- Què has canviat?
+- Quina funció has afegit?
 - Què t'agrada més del teu?
 
 ### Increïble feina aquests 2 dies 👏
