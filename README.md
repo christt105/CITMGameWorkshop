@@ -1,40 +1,48 @@
 # CITM Game Workshop
 
-This repository contains the materials and source code for a 4-day game development workshop aimed at beginners. Each day covers a different game and gradually introduces new concepts using either Unity or Godot.
+Materials and source code for a 4-day game development workshop for beginners (ages 12–16), using Unity and Godot.
 
-## Projects
+This year the workshop focuses on **2 games over 4 days** so there is time to learn calmly, add mechanics and let students create their own levels:
+
+- 🐦 **Flappy Bird (Unity)** — 2 days
+- 🧱 **3D Platformer (Godot)** — 2 days
+
+Both games follow the same "fill in the `TODO`" format: the project is almost finished and students complete the missing pieces, guided step by step.
+
+## This year's games
+
+### 🐦 Flappy Bird (Unity) — Days 1–2
+Build a Flappy Bird by completing 7 guided `TODO`s, then personalize it (sprites, sounds, juice, difficulty).
+
+- 📖 Student guide: [`flappy-bird/GUIA.md`](./flappy-bird/GUIA.md)
+- Code (scaffold for students): branch `workshop-scaffold` of [FlappyBirdUnityWorkshop](https://github.com/christt105/FlappyBirdUnityWorkshop)
+- Solution: branch `main` of the same repo
+- License: MIT
+- Based on: [FlappyBirdUnityWorkshop](https://github.com/christt105/FlappyBirdUnityWorkshop)
+- ➡️ [`flappy-bird/`](./flappy-bird)
+
+### 🧱 3D Platformer (Godot) — Days 3–4
+Program the character (move, double jump, coins, falling platforms), then design your own level and play your classmates' levels.
+
+- 📖 Student guide: [`platformer-3d/GUIA.md`](./platformer-3d/GUIA.md)
+- 🛠️ Extra mechanics for requests: [`platformer-3d/MECANIQUES.md`](./platformer-3d/MECANIQUES.md)
+- License: MIT
+- Based on: [KenneyNL/Starter-Kit-3D-Platformer](https://github.com/KenneyNL/Starter-Kit-3D-Platformer)
+- ➡️ [`platformer-3d/`](./platformer-3d)
+
+> Workshop materials are in Catalan (code comments and student guides).
+
+---
+
+## Archive (previous editions)
+
+These games were used in past editions and are kept here for reference. They are **not** used in the current 2-game edition.
 
 ### 🕹️ Pong (Unity)
-A simple recreation of the classic Pong game using Unity.
-
-Based on: [zigurous/unity-pong-tutorial](https://github.com/zigurous/unity-pong-tutorial) *(no license specified)*  
-➡️ [`pong/`](./pong)
-
----
-
-### 🐦 Flappy Bird (Unity)
-A Flappy Bird clone created from scratch during the workshop.
-
-Based on: [FlappyBirdUnityWorkshop](https://github.com/christt105/FlappyBirdUnityWorkshop)  
-License: MIT  
-➡️ [`flappy-bird/`](./flappy-bird)
-
----
+Based on: [zigurous/unity-pong-tutorial](https://github.com/zigurous/unity-pong-tutorial) *(no license specified)* — ➡️ [`pong/`](./pong)
 
 ### 🪐 Asteroids (Godot)
-A basic version of Asteroids made in Godot 4. The game was simplified to make it endless and more suitable for beginners.
-
-Based on: [KaanAlpar/asteroids_tutorial](https://github.com/KaanAlpar/asteroids_tutorial) *(no license specified)*  
-➡️ [`asteroids/`](./asteroids)
-
----
-
-### 🧱 3D Platformer (Godot)
-A 3D platformer using Kenney’s Starter Kit as the foundation. Movement and jumping were implemented during the workshop.
-
-Based on: [KenneyNL/Starter-Kit-3D-Platformer](https://github.com/KenneyNL/Starter-Kit-3D-Platformer)  
-License: MIT  
-➡️ [`platformer-3d/`](./platformer-3d)
+A simplified, endless version of Asteroids made in Godot 4. Based on: [KaanAlpar/asteroids_tutorial](https://github.com/KaanAlpar/asteroids_tutorial) *(no license specified)* — ➡️ [`asteroids/`](./asteroids)
 
 ---
 
