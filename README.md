@@ -64,7 +64,11 @@ A simplified, endless version of Asteroids made in Godot 4. Based on: [KaanAlpar
 
 ## Presentations
 
+🌐 **Live site: https://christt105.github.io/CITMGameWorkshop/** — one deck per day, plus download and guide links. Auto-rebuilds on every change to `slides/`.
+
 - **Intro** (general workshop opener): [Google Slides](https://docs.google.com/presentation/d/1JLaIByuc94TJuL3XWGsWRPipyOQUfN87R-Oi_ff_Z3w/edit?usp=sharing)
 - **One deck per day** (Catalan, Marp — slides + teacher notes): [`slides/`](./slides)
   - Day 1 — Flappy Bird (build it) · Day 2 — Flappy Bird (personalize)
   - Day 3 — 3D Platformer (mechanics) · Day 4 — 3D Platformer (level design)
+
+The decks show the goal and concepts only — the solution code stays in each game's `GUIA.md` (safety net for students who fall behind), and every deck ends with extra challenges for fast finishers.
