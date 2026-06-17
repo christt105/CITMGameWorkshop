@@ -16,7 +16,7 @@ Primer faràs que el personatge es mogui i salti, i després **dissenyaràs el t
 
 ## Abans de començar
 
-1. Obre **Godot 4** i importa el projecte de la carpeta `Platformer3D` (tria el fitxer `project.godot`).
+1. Obre **Godot 4.6** i importa el projecte de la carpeta `Platformer3D` (tria el fitxer `project.godot`).
 2. A dalt a la dreta prem ▶️ **Play** per provar. El personatge encara no es mou: ho arreglarem!
 3. Els scripts són a les carpetes `scripts/` i `objects/`. Fes doble clic per obrir-los.
 
