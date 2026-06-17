@@ -1,0 +1,3 @@
+# Generated/local slide builds (GitHub Actions builds the published site)
+slides/export/
+_site/

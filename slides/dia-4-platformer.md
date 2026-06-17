@@ -45,7 +45,7 @@ Repeteix per fer el teu recorregut!
 
 - A `models/` hi ha `flag.glb` (una bandera).
 - Arrossega-la al **final** del recorregut.
-- Demana al profe la mecànica **"tocar la bandera = guanyar"**.
+- Demana'm la mecànica **"tocar la bandera = guanyar"**.
 
 > El joc ja reinicia si caus al buit. Aprofita-ho per fer salts difícils!
 
@@ -73,6 +73,21 @@ Repeteix per fer el teu recorregut!
 - Un nivell curt i divertit > un nivell llarg i impossible.
 
 <!-- Recordeu el "playtest": que el provin ells mateixos abans del showcase. -->
+
+---
+
+<!-- _class: invert -->
+
+# 🚀 Reptes de disseny
+
+Per als qui volen anar més enllà:
+
+- Un nivell amb **tema** (gel, lava, espai...).
+- Una **moneda secreta** molt amagada.
+- Que calguin **5 monedes** per obrir la meta.
+- Un nivell que es passi en **menys de 30 segons**.
+
+<!-- Reptes per als ràpids. La meta amb N monedes és una recepta de MECANIQUES.md. -->
 
 ---
 

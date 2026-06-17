@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taller: Crea el teu primer videojoc — CITM·UPC</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #0f172a; color: #e2e8f0; line-height: 1.5;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; }
+  h1 { font-size: 1.5rem; margin: 0 0 4px; }
+  .sub { color: #94a3b8; margin: 0 0 28px; font-size: .95rem; }
+  h2 { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: #64748b; margin: 28px 0 10px; }
+  a.card {
+    display: flex; align-items: center; gap: 14px;
+    text-decoration: none; color: inherit;
+    background: #1e293b; border: 1px solid #334155; border-radius: 14px;
+    padding: 16px 18px; margin-bottom: 12px;
+    transition: background .15s, transform .05s;
+  }
+  a.card:active { transform: scale(.98); }
+  a.card:hover { background: #273449; }
+  .emoji { font-size: 1.8rem; flex-shrink: 0; }
+  .meta .day { font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: #38bdf8; }
+  .meta .title { font-weight: 600; font-size: 1.05rem; }
+  .meta .desc { color: #94a3b8; font-size: .85rem; }
+  .row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .row a.card { flex: 1 1 240px; margin-bottom: 0; }
+  .tip { margin: 28px 0 8px; color: #94a3b8; font-size: .82rem; text-align: center; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>🎮 Taller: Crea el teu primer videojoc</h1>
+    <p class="sub">CITM·UPC · 2 jocs en 4 dies · Unity + Godot</p>
+
+    <h2>Presentacions per dia</h2>
+    <a class="card" href="dia-1-flappy-bird.html">
+      <span class="emoji">🐦</span>
+      <span class="meta"><div class="day">Dia 1 · Unity</div><div class="title">Flappy Bird — muntar el joc</div><div class="desc">Salt, canonades, punts</div></span>
+    </a>
+    <a class="card" href="dia-2-flappy-bird.html">
+      <span class="emoji">🎨</span>
+      <span class="meta"><div class="day">Dia 2 · Unity</div><div class="title">Flappy Bird — personalitzar</div><div class="desc">Dibuixos, sons, efectes, dificultat</div></span>
+    </a>
+    <a class="card" href="dia-3-platformer.html">
+      <span class="emoji">🧱</span>
+      <span class="meta"><div class="day">Dia 3 · Godot</div><div class="title">Plataformes 3D — mecàniques</div><div class="desc">Moviment, doble salt, monedes</div></span>
+    </a>
+    <a class="card" href="dia-4-platformer.html">
+      <span class="emoji">🏗️</span>
+      <span class="meta"><div class="day">Dia 4 · Godot</div><div class="title">Plataformes 3D — crear nivells</div><div class="desc">Dissenya el teu nivell + showcase</div></span>
+    </a>
+
+    <h2>Descarrega els jocs</h2>
+    <div class="row">
+      <a class="card" href="https://github.com/christt105/CITMGameWorkshop/releases/download/v2026/FlappyBird-2026.zip">
+        <span class="emoji">🐦</span>
+        <span class="meta"><div class="title">FlappyBird-2026.zip</div><div class="desc">Obre amb Unity Hub</div></span>
+      </a>
+      <a class="card" href="https://github.com/christt105/CITMGameWorkshop/releases/download/v2026/Platformer3D-2026.zip">
+        <span class="emoji">🧱</span>
+        <span class="meta"><div class="title">Platformer3D-2026.zip</div><div class="desc">Importa amb Godot 4.6</div></span>
+      </a>
+    </div>
+
+    <h2>Guies (si t'encalles)</h2>
+    <a class="card" href="https://github.com/christt105/CITMGameWorkshop/blob/main/flappy-bird/GUIA.md">
+      <span class="emoji">📖</span>
+      <span class="meta"><div class="title">Guia Flappy Bird</div><div class="desc">Tot el codi pas a pas</div></span>
+    </a>
+    <a class="card" href="https://github.com/christt105/CITMGameWorkshop/blob/main/platformer-3d/GUIA.md">
+      <span class="emoji">📖</span>
+      <span class="meta"><div class="title">Guia Plataformes 3D</div><div class="desc">Tot el codi pas a pas</div></span>
+    </a>
+
+    <p class="tip">Toca una presentació. Dins, fes servir les fletxes ◀ ▶ o l'espai per avançar.</p>
+  </div>
+</body>
+</html>

@@ -22,9 +22,9 @@ Avui farem el nostre primer joc... i funcionarà de veritat!
 - **Dia 1:** muntar el Flappy Bird → l'ocell salta, hi ha canonades i pots puntuar o morir.
 - **Dia 2:** fer-lo **teu** → dibuixos, sons, efectes i dificultat.
 
-> El joc ja està quasi fet. Tu ompliràs els trossos que falten (els `TODO`).
+> El joc ja està quasi fet. Avui el completem **junts**, pas a pas.
 
-<!-- Expliqueu el format "omplir buits": no s'escriu tot de zero, es completen peces concretes amb pistes. -->
+<!-- Expliqueu el format: no s'escriu tot de zero, completem peces concretes. Ho fem en directe tots alhora. -->
 
 ---
 
@@ -52,94 +52,66 @@ Un **motor de videojocs**: el programa on muntem el joc.
 
 ---
 
-# Què és un `TODO`?
+# Com treballarem avui 🤝
 
-Un comentari al codi que vol dir **"aquí falta feina"**.
+- Ho fem **junts**, pas a pas. Jo ho faig i tu em segueixes.
+- Anem omplint uns trossos marcats amb **`TODO`** (de l'1 al 7).
+- **Si et quedes enrere** → tens la `GUIA.md` amb tot el codi. No pateixis.
+- **Si acabes abans** → tens **reptes extra** al final. 🚀
 
-```csharp
-// TODO 1: Quan es premi el botó, fes saltar l'ocell
-```
-
-- Els trobaràs amb la cerca del teu editor escrivint `TODO`.
-- N'hi ha **7**, de l'1 al 7. Els farem **en ordre**.
-- Cada un té una **pista** amb el codi quasi escrit.
-
-<!-- Ensenyeu com cercar "TODO" a Visual Studio / Rider. -->
+<!-- Deixeu clar el triple ritme: junts / GUIA per als que es despengen / reptes per als ràpids. -->
 
 ---
 
-# El cor del joc: l'ocell 🐤
+# El repte d'avui 🎯
 
-**TODO 1 — Saltar** (`Bird.cs`)
+Farem que el joc cobri vida, peça a peça:
 
-Quan premem la tecla, l'ocell ha de pujar.
+1. 🐤 L'ocell **salta** quan premem.
+2. ⭐ **Sumar un punt** en passar una canonada.
+3. 💥 **Morir** en xocar.
+4. 🟩 Les canonades **es mouen** i desapareixen.
+5. ➕ Apareixen **canonades noves** soles.
+6. 🔢 El **marcador** compta.
 
-```csharp
-if (Input.GetButtonDown("Jump"))
-{
-    _rigidbody2D.velocity = Vector2.zero;
-    _rigidbody2D.AddForce(Vector2.up * force, ForceMode2D.Impulse);
-}
-```
-
-<!-- "velocity = 0" oblida la caiguda; AddForce dona l'empenta amunt. Proveu Play després de cada TODO. -->
+<!-- Aquesta és la llista de la sessió = els 7 TODO en llenguatge normal. Aneu marcant-los a mesura que els feu. -->
 
 ---
 
-# Puntuar i morir
+# Conceptes que veurem 💡
 
-**TODO 2 — Punt** / **TODO 3 — Morir** (`Bird.cs`)
+- **Física:** per què l'ocell cau i com el fem saltar.
+- **Etiquetes (tags):** com sap el joc què és cada cosa (`Point`, `Obstacle`).
+- **Temps:** moure coses igual de ràpid a tots els ordinadors.
+- **Crear i destruir** objectes mentre juguem.
 
-- Si l'ocell toca un objecte amb etiqueta `Point` → suma punt.
-- Si toca un amb etiqueta `Obstacle` → s'acaba la partida.
-
-> 💡 Les **etiquetes (tags)** ens diuen "què" és cada objecte.
-
-<!-- Concepte clau: tags + col·lisions. AddPoint() i GameOver() ja existeixen. -->
+<!-- No cal aprofundir: nomenar-los mentre apareixen al codi en directe. -->
 
 ---
 
-# Les canonades 🟩
+# Ara, tots junts 🎮
 
-**TODO 4 i 5** (`Pipe.cs`)
+Obrim els scripts i anem fent els **TODO en ordre**.
+Després de cada un... ▶️ **Play** per veure el canvi!
 
-- **Moure-les** cap a l'esquerra cada fotograma.
-- **Esborrar-les** quan surten de la pantalla (per no acumular-ne).
+> Si t'encalles: mira la `GUIA.md`, llegeix el missatge vermell de la *Console* i aixeca la mà. 🙋
 
-**TODO 6** (`PipeSpawner.cs`)
-
-- **Crear-ne** de noves cada cert temps, a una alçada a l'atzar.
-
-<!-- Aquí apareix Time.deltaTime (moviment igual a tots els ordinadors) i Instantiate (crear còpies). -->
+<!-- Aquí comença el live-coding. Ritme tranquil, comprovant que ningú es queda enrere. -->
 
 ---
 
-# El marcador 🔢
+<!-- _class: invert -->
 
-**TODO 7** (`GameManager.cs`)
+# 🚀 Reptes extra
 
-Cada punt suma 1 i ho ensenyem per pantalla.
+Has acabat els 7 TODO? Prova això:
 
-```csharp
-_score += 1;
-scoreText.text = _score.ToString();
-```
+- Fes que les canonades vagin **més ràpides** com més punts tens.
+- Fes sonar un **so** quan l'ocell salta.
+- Canvia el **dibuix** de l'ocell o el fons.
+- Inventa: què faria el teu joc **diferent**?
 
-✅ Amb això... **ja tens un Flappy Bird que funciona!**
-
-<!-- Celebreu-ho. Que tothom el provi i compari puntuacions. -->
-
----
-
-# Ara et toca a tu 🎮
-
-- Acaba els **7 TODO** en ordre.
-- Prova amb ▶️ **Play** després de cada un.
-- Guia completa amb el codi: `GUIA.md`.
-
-**Si t'encalles:** llegeix el missatge vermell de la *Console*, revisa les claus `{ }` i el `;`, i aixeca la mà. 🙋
-
-<!-- Volteu per l'aula. Errors típics: falta ; , claus mal tancades, tag mal escrit. -->
+<!-- Per als ràpids. Són un tast del dia 2. No cal solució a la slide: que experimentin (GUIA i Inspector). -->
 
 ---
 

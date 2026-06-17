@@ -13,7 +13,7 @@ header: 'Taller: Crea el teu primer videojoc — CITM·UPC'
 
 Mateix joc, mil versions diferents.
 
-<!-- Recordeu el dia 1: tots tenim el mateix joc. Avui cadascú el fa únic. -->
+<!-- Recordeu el dia 1: tots tenim el mateix joc. Avui cadascú el fa únic. Avui NO anem tots al mateix ritme: cadascú tria. -->
 
 ---
 
@@ -23,52 +23,55 @@ Mateix joc, mil versions diferents.
 - Les canonades **es mouen** i **es creen** soles.
 - Puntuem i morim amb les **etiquetes**.
 
-> Avui no afegim "obligacions": avui **experimentem**.
+> Tothom té el joc funcionant? Si no, mirem la `GUIA.md` i ho posem al dia.
 
-<!-- Comproveu que tothom té el joc del dia 1 funcionant abans de continuar. -->
-
----
-
-# Què vol dir "personalitzar"?
-
-Fer canvis perquè el joc tingui **la teva cara**:
-
-🎨 dibuixos · 🎵 sons · ✨ efectes · 🔥 dificultat
-
-Tria el que més t'agradi. **No cal fer-ho tot.**
-
-<!-- Doneu permís explícit per triar. L'objectiu és la creativitat, no completar una llista. -->
+<!-- Assegureu-vos que tothom parteix d'un joc jugable abans de personalitzar. -->
 
 ---
 
-# Nivell fàcil 🟢
+# Avui tries TU 🧭
 
-- **Canvia el dibuix de l'ocell** (porta una imatge nova a `Assets`).
-- **Canvia el fons** i el **color de les canonades**.
-- **Ocell més lleuger o pesat:** valor `force` de l'script `Bird`.
-- **Canonades més ràpides:** valor `speed` de l'script `Pipe`.
+No anem tots iguals. **Tria el teu camí** i fes-lo créixer.
 
-<!-- Tot des de l'Inspector o arrossegant sprites. Cap codi nou. Bon punt d'entrada per a tothom. -->
+🟢 Fàcil · 🟡 Mitjà · 🔴 Repte
 
----
+> Comença pel que et faci més il·lusió. **No cal fer-ho tot.**
 
-# Nivell mitjà 🟡
-
-- **Més difícil amb el temps:** que `spawnRate` baixi quan puges punts.
-- **Sons:** efecte al saltar, al puntuar i al xocar.
-- **Partícules:** un petit efecte quan sumes un punt.
-
-<!-- Aquí ja toquem una mica de codi/components. Acompanyeu qui s'hi atreveixi. -->
+<!-- Concepte del dia: autonomia. Cadascú avança fins on vulgui/pugui. -->
 
 ---
 
-# Repte 🔴
+# 🟢 Nivell fàcil
 
-- **Power-up d'escut:** un objecte que et deixa xocar una vegada sense morir.
-- **Mode lent:** una tecla que baixi `Time.timeScale` un moment.
+- Canvia el **dibuix de l'ocell**.
+- Canvia el **fons** i el **color de les canonades**.
+- Fes l'ocell més **lleuger o pesat**.
+- Fes les canonades més **ràpides o lentes**.
+
+<!-- Tot des de l'Inspector o arrossegant imatges. Punt d'entrada per a tothom, sense codi. -->
+
+---
+
+# 🟡 Nivell mitjà
+
+- Que el joc es faci **més difícil** com més punts tens.
+- Afegeix **sons**: saltar, puntuar, xocar.
+- Afegeix **partícules** quan sumes un punt.
+
+> Aquí toquem una mica més el projecte. La `GUIA.md` t'ajuda.
+
+<!-- Acompanyeu qui s'hi atreveixi. Pistes a la guia. -->
+
+---
+
+# 🔴 Reptes
+
+- **Power-up d'escut:** xocar una vegada sense morir.
+- **Mode lent:** una tecla que alenteixi el temps un moment.
+- **Monedes** que donen punts extra.
 - **El teu propi invent!** 💡
 
-<!-- Per als més ràpids. Doneu pistes però deixeu que ho intentin ells. -->
+<!-- Per als ràpids. Reptes oberts: que pensin la solució (amb ajuda puntual). -->
 
 ---
 
@@ -79,7 +82,7 @@ Tria el que més t'agradi. **No cal fer-ho tot.**
 - Tema **espai**, **submarí**, **píxel art**...
 - Música del teu joc preferit 🎶
 
-<!-- Llançar idees ajuda els qui es bloquegen davant del full en blanc. -->
+<!-- Per desbloquejar els qui es queden mirant el full en blanc. -->
 
 ---
 
@@ -89,7 +92,7 @@ Tria el que més t'agradi. **No cal fer-ho tot.**
 - Prova sovint amb ▶️ **Play**.
 - Pensa: com vull que **se senti** el meu joc?
 
-> Recorda: és **difícil** fer jocs. Equivocar-se és part del joc.
+> És **difícil** fer jocs. Equivocar-se és part del joc.
 
 <!-- Volteu i animeu. Feu fotos dels jocs per al showcase. -->
 
