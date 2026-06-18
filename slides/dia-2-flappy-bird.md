@@ -42,21 +42,24 @@ El fem **teu**: dibuixos, sons, ambient.
 
 ---
 
-# 1a part · Menú de funcions 🛠️
+# 1a part · Afegim funcions JUNTS 🛠️
 
-Tria'n unes quantes (no cal totes). Tens el codi a `FUNCIONS.md`.
+Triem **1 o 2** i les fem **entre tots**, pas a pas.
+(Programar mecàniques en solitari és difícil → ho fem en equip.)
 
 - 🔥 **Dificultat creixent** (més punts → més difícil)
 - 🛡️ **Power-up d'escut** (xoca una vegada sense morir)
 - 🪙 **Monedes** que donen punts extra
-- 🐢 **Mode lent** amb una tecla
 
-<!-- Aquestes són mecàniques de veritat, no només estètica. Acompanyeu amb FUNCIONS.md. -->
+<!-- El profe tria 1-2 segons el temps i el nivell. Codi a FUNCIONS.md. Mecàniques de veritat, no estètica. -->
 
 ---
 
-# 1a part · Encara més 🛠️
+# Més funcions (opcionals) 🛠️
 
+Si va bé i hi ha temps, també podem afegir:
+
+- 🐢 **Mode lent** amb una tecla
 - 🏅 **Medalles** segons la puntuació final
 - 🌄 **Fons en moviment** (parallax)
 - ✨ **Juice**: partícules, sons, sacsejada en morir
@@ -92,13 +95,13 @@ Tria'n unes quantes (no cal totes). Tens el codi a `FUNCIONS.md`.
 
 # Ara et toca a tu 🎮
 
-- **1r** afegeix 2-3 funcions del menú.
-- **Després** personalitza'l al teu gust.
+- **1r** (junts) hem afegit les funcions noves.
+- **Ara** personalitza'l **al teu gust i al teu ritme**.
 - Prova sovint amb ▶️ **Play**.
 
 > És **difícil** fer jocs. Equivocar-se és part del joc.
 
-<!-- Volteu, resoleu dubtes amb FUNCIONS.md i GUIA.md. Feu fotos per al showcase. -->
+<!-- La 2a part és la lliure: cadascú personalitza. Els ràpids no s'avorreixen perquè la creativitat no té límit. -->
 
 ---
 

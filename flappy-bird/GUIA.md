@@ -118,24 +118,27 @@ scoreText.text = _score.ToString();
 
 ---
 
-## DIA 2 — Fes-lo teu 🎨
+## DIA 2 — Afegim funcions i el fem nostre
 
-Ara toca experimentar. Tria les idees que més t'agradin (no cal fer-les totes):
+> No vas acabar el dia 1? Baixa **`FlappyBird-Dia2.zip`** (ja té el dia 1 fet) i continua des d'aquí.
 
-### Fàcil
-- **Canvia el dibuix de l'ocell:** porta una imatge nova a `Assets` i posa-la al `Sprite Renderer` de l'ocell.
+### 1a part — Funcions noves (les fem JUNTS) 🛠️
+
+El profe triarà **1 o 2 funcions** i les farem entre tots, pas a pas. El codi és a **`FUNCIONS.md`**. Algunes idees:
+- 🔥 **Dificultat creixent** (com més punts, més difícil).
+- 🛡️ **Power-up d'escut** (xoca una vegada sense morir).
+- 🪙 **Monedes** que donen punts extra.
+
+Així el dia 2 també té programació de veritat, no només decoració.
+
+### 2a part — Personalitza'l (al teu ritme) 🎨
+
+Aquí cadascú va al seu aire. **No cal fer-ho tot**, tria el que més t'agradi:
+- **Canvia el dibuix de l'ocell:** porta una imatge nova a `Assets` i posa-la al `Sprite Renderer`.
 - **Canvia el fons i el color de les canonades.**
-- **Fes l'ocell més lleuger o més pesat:** canvia el valor `force` de l'script `Bird` (a l'Inspector).
+- **Fes l'ocell més lleuger o més pesat:** valor `force` de l'script `Bird` (a l'Inspector).
 - **Canvia la velocitat de les canonades:** valor `speed` de l'script `Pipe`.
-
-### Mitjà
-- **Més difícil amb el temps:** fes que `spawnRate` (al `PipeSpawner`) baixi una mica cada vegada que sumes punts.
-- **Sons:** afegeix un `AudioSource` i fes sonar un efecte al saltar i un altre al morir.
-- **Partícules:** afegeix un efecte de partícules quan sumes un punt.
-
-### Repte
-- **Power-up d'escut:** un objecte que, si el agafes, et deixa xocar una vegada sense morir.
-- **Mode lent:** una tecla que baixi `Time.timeScale` un moment.
+- **Sons** al saltar i al morir, **partícules** en puntuar, un **tema** (nit, espai...).
 
 > 🏆 Al final del dia 2 ensenyarem els jocs a la classe. Cada Flappy Bird serà diferent!
 
