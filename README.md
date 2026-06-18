@@ -19,6 +19,8 @@ Get the ready-to-open starter templates from the **[v2026 release](https://githu
 
 Each ZIP includes its `GUIA.md`; the Flappy ZIPs also include `FUNCIONS.md` (day-2 feature menu).
 
+> Maintainer: after editing the projects, rebuild and re-upload the release ZIPs with `./build-templates.sh --upload` (needs the FlappyBird submodule on its `workshop-scaffold` branch).
+
 ## This year's games
 
 ### 🐦 Flappy Bird (Unity) — Days 1–2
