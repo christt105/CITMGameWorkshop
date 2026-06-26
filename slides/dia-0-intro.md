@@ -27,7 +27,7 @@ Christian Martínez De La Rosa
 
 > Jugar a videojocs pot ser **diferent** a crear-los.
 
-![h:240px](img/intro/image9.png)
+![h:240px](img/intro/image9.png)![h:240px](img/intro/minecraft.png)
 
 <!-- Trenca-gel. Deixeu que responguin en veu alta, creeu ambient. -->
 
@@ -45,23 +45,18 @@ Coneixeu algun d'aquests?
 
 # Com es fa un videojoc?
 
-![h:300px](img/intro/image13.png)
-
-<!-- Transició cap a la part "teòrica" curta. Pregunta oberta a la classe. -->
-
----
-
-# Què és un videojoc?
-
+- Què és un videojoc?
 - Quin és el seu **objectiu**?
 - Quines **parts** té?
 - Qui hi **participa**?
+
+![h:300px](img/intro/image13.png)
 
 <!-- Llanceu les 4 preguntes i que provin de respondre abans de passar a les respostes. -->
 
 ---
 
-# Les respostes
+# Com es fa un videojoc?
 
 - **Què és?** Una aplicació interactiva.
 - **Objectiu?** Principalment entretenir, però també educar, comunicar o experimentar.
@@ -79,7 +74,7 @@ Coneixeu algun d'aquests?
 
 > Avui **partirem de zero**. 🙂
 
-![h:200px](img/intro/image6.png) ![h:200px](img/intro/image2.png)
+![h:300px](img/intro/image6.png) ![h:300px](img/intro/image2.png)
 
 <!-- Mesureu el nivell de la sala. Tranquil·litzeu els qui no han programat mai. -->
 
@@ -97,12 +92,13 @@ Què són? Programes que ens donen fet allò difícil (física, gràfics, sons..
 
 # Què farem?
 
-- 🐦 **Flappy Bird** (Unity) — 2 dies
-- 🧱 **Plataformes 3D** (Godot) — 2 dies
+- 🐦 **Flappy Bird** ![h:30](img/intro/image12.png) - 2 dies
+- 🧱 **Plataformes 3D** ![h:30](img/intro/image1.png) - 2 dies
 
-> 🖼️ *(posa aquí una captura del Flappy Bird i una del joc de plataformes 3D)*
 
-<!-- Única slide canviada respecte a la intro vella (abans: Pong + ????). Imatges d'aquests 2 jocs disponibles a slides/img/intro si les vols afegir. -->
+![h:300px](img/intro/flappy_bird.png) ![h:300px](img/intro/platformer3D.png)
+
+<!--   -->
 
 ---
 
