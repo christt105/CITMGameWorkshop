@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -23,6 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
       - name: Build slide decks with Marp
         run: |
@@ -39,6 +41,11 @@ jobs:
           cp platformer-3d/GUIA.md _site/platformer-guia.md
           cp platformer-3d/MECANIQUES.md _site/platformer-mecaniques.md
           [ -d slides/img ] && cp -r slides/img _site/img || true
+
+      - name: Build and upload release templates
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./build-templates.sh --upload
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
