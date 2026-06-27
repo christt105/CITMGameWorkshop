@@ -65,16 +65,13 @@ Un **motor de videojocs**: el programa on muntem el joc.
 
 # El repte d'avui 🎯
 
-Farem que el joc cobri vida, peça a peça:
+Farem que el joc cobri vida, pas a pas:
 
-1. 🐤 L'ocell **salta** quan premem.
-2. ⭐ **Sumar un punt** en passar una canonada.
-3. 💥 **Morir** en xocar.
-4. 🟩 Les canonades **es mouen** i desapareixen.
-5. ➕ Apareixen **canonades noves** soles.
-6. 🔢 El **marcador** compta.
+1. 🐤 L'ocell **salta** quan premem la barra espaiadora.
+2. 🟩 Les canonades **es mouen** cap a l'esquerra i **desapareixen** al final.
+3. ➕ Les canonades **apareixen soles** cada cert temps a alçades a l'atzar.
 
-<!-- Aquesta és la llista de la sessió = els 7 TODO en llenguatge normal. Aneu marcant-los a mesura que els feu. -->
+<!-- Aquesta és la llista de la sessió. Primer farem el salt, després el moviment i destrucció de canonades, i finalment el generador automàtic. -->
 
 ---
 
@@ -106,14 +103,13 @@ Crearem els fitxers a `Assets/Scripts` i programarem junts pas a pas:
 
 # 🚀 Reptes extra
 
-Has acabat els 7 TODO? Prova això:
+Has acabat de programar-ho tot? Prova això:
 
-- Fes que les canonades vagin **més ràpides** com més punts tens.
 - Fes sonar un **so** quan l'ocell salta.
-- Canvia el **dibuix** de l'ocell o el fons.
+- Canvia el **dibuix** de l'ocell o el fons a l'editor d'Unity.
 - Inventa: què faria el teu joc **diferent**?
 
-<!-- Per als ràpids. Són un tast del dia 2. No cal solució a la slide: que experimentin (GUIA i Inspector). -->
+<!-- Per als ràpids. No cal solució a la slide: que experimentin amb l'Inspector o afegint recursos. -->
 
 ---
 

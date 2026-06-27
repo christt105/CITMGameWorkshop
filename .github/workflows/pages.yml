@@ -35,6 +35,7 @@ jobs:
           cp slides/viewer.html _site/viewer.html
           cp flappy-bird/GUIA.md _site/flappy-bird-guia.md
           cp flappy-bird/FUNCIONS.md _site/flappy-bird-funcions.md
+          cp flappy-bird/GUIA_PROFESSOR.md _site/flappy-bird-professor.md
           cp platformer-3d/GUIA.md _site/platformer-guia.md
           cp platformer-3d/MECANIQUES.md _site/platformer-mecaniques.md
           [ -d slides/img ] && cp -r slides/img _site/img || true

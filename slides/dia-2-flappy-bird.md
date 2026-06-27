@@ -21,7 +21,7 @@ Avui afegim **funcions noves** i el fem **únic**.
 
 - Descarrega el fitxer **`FlappyBird-Dia2.zip`** des de la web del taller.
 - Aquest projecte conté tota la part visual, els menús i el marcador configurats, però els scripts estan buits (**TODOs 1 al 7**).
-- Completarem els TODOs plegats en 15 minuts per repassar el Dia 1 i fer que el joc funcioni.
+- Completarem els TODOs plegats per repassar el Dia 1 i fer que el joc funcioni.
 
 <!-- Comenceu tots des del ZIP del Dia 2. Així tothom té exactament el mateix punt de partida net i funcional per afegir extres. -->
 
@@ -63,7 +63,7 @@ Si va bé i hi ha temps, també podem afegir:
 - 🌄 **Fons en moviment** (parallax)
 - ✨ **Juice**: partícules, sons, sacsejada en morir
 
-> Pregunta'm la que vulguis muntar: tinc el codi preparat.
+> Pregunta al professor si tens qualsevol dubte o vols idear una funció nova!
 
 <!-- Reserveu temps per a aquestes als qui van ràpids. Són un bon "repte extra". -->
 
