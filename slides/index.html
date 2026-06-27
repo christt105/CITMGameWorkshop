@@ -31,7 +31,25 @@
   .meta .desc { color: #94a3b8; font-size: .85rem; }
   .row { display: flex; flex-wrap: wrap; gap: 12px; }
   .row a.card { flex: 1 1 240px; margin-bottom: 0; }
-  .tip { margin: 28px 0 8px; color: #94a3b8; font-size: .82rem; text-align: center; }
+  .tip { margin: 8px 0; color: #94a3b8; font-size: .82rem; text-align: center; }
+  .footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid #334155;
+    text-align: center;
+  }
+  .github-link {
+    margin: 8px 0 0;
+    font-size: 0.85rem;
+  }
+  .github-link a {
+    color: #38bdf8;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+  .github-link a:hover {
+    opacity: 0.8;
+  }
 </style>
 </head>
 <body>
@@ -99,7 +117,10 @@
       </a>
     </div>
 
-    <p class="tip">Toca una presentació. Dins, fes servir les fletxes ◀ ▶ o l'espai per avançar.</p>
+    <div class="footer">
+      <p class="tip">Toca una presentació. Dins, fes servir les fletxes ◀ ▶ o l'espai per avançar.</p>
+      <p class="github-link"><a href="https://github.com/christt105/CITMGameWorkshop" target="_blank">🔗 Codi font a GitHub (Repo Principal)</a></p>
+    </div>
   </div>
 </body>
 </html>

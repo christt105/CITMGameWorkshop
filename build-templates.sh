@@ -58,6 +58,16 @@ echo "==> Platformer3D-2026.zip (Godot 4.6)"
 PF="$DIST/Platformer3D-2026"; mkdir -p "$PF"
 cp -r "$ROOT/platformer-3d/Platformer3D/." "$PF/"
 rm -rf "$PF/.godot"
+# Neteja de solucions dels scripts de Godot (.gd)
+python3 -c "
+import glob, re
+for f in glob.glob('$PF/**/*.gd', recursive=True):
+    with open(f, 'r', encoding='utf-8') as file:
+        content = file.read()
+    content = re.sub(r'[ \t]*# <SOL>.*?[ \t]*# </SOL>\n?', '', content, flags=re.DOTALL)
+    with open(f, 'w', encoding='utf-8') as file:
+        file.write(content)
+"
 cp "$ROOT/platformer-3d/GUIA.md" "$ROOT/platformer-3d/MECANIQUES.md" "$PF/"
 zipdir Platformer3D-2026
 
