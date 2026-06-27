@@ -43,7 +43,7 @@ Canviem de motor i saltem a les 3 dimensions!
 
 # Obrim el projecte
 
-1. Obre **Godot 4.6**.
+1. Obre **Godot 4.7**.
 2. *Importar* → tria el fitxer `project.godot` de `Platformer3D`.
 3. Prem ▶️ **Play**: el personatge encara no es mou. Ho arreglem!
 

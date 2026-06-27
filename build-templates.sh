@@ -54,7 +54,7 @@ for f in glob.glob('$FD/FlappyBirdWorkshop/Assets/Scripts/**/*.cs', recursive=Tr
 cp "$ROOT/flappy-bird/GUIA.md" "$ROOT/flappy-bird/FUNCIONS.md" "$SUB/LICENSE" "$FD/"
 zipdir FlappyBird-Dia2
 
-echo "==> Platformer3D-2026.zip (Godot 4.6)"
+echo "==> Platformer3D-2026.zip (Godot 4.7)"
 PF="$DIST/Platformer3D-2026"; mkdir -p "$PF"
 cp -r "$ROOT/platformer-3d/Platformer3D/." "$PF/"
 rm -rf "$PF/.godot"

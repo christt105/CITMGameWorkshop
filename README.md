@@ -15,7 +15,7 @@ Get the ready-to-open starter templates from the **[v2026 release](https://githu
 
 - 🐦 **[FlappyBird-2026.zip](https://github.com/christt105/CITMGameWorkshop/releases/download/v2026/FlappyBird-2026.zip)** → day-1 starter (the `TODO`s). Open the `FlappyBirdWorkshop` folder with **Unity Hub** (Unity 2022.3 LTS).
 - 🐦 **[FlappyBird-Dia2.zip](https://github.com/christt105/CITMGameWorkshop/releases/download/v2026/FlappyBird-Dia2.zip)** → day-2 checkpoint (day-1 already finished) for anyone who didn't complete day 1.
-- 🧱 **[Platformer3D-2026.zip](https://github.com/christt105/CITMGameWorkshop/releases/download/v2026/Platformer3D-2026.zip)** → import `project.godot` with **Godot 4.6**.
+- 🧱 **[Platformer3D-2026.zip](https://github.com/christt105/CITMGameWorkshop/releases/download/v2026/Platformer3D-2026.zip)** → import `project.godot` with **Godot 4.7**.
 
 Each ZIP includes its `GUIA.md`; the Flappy ZIPs also include `FUNCIONS.md` (day-2 feature menu).
 
