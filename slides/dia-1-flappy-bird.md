@@ -19,12 +19,12 @@ Avui farem el nostre primer joc... i funcionarà de veritat!
 
 # Què farem aquests 2 dies?
 
-- **Dia 1:** muntar el Flappy Bird → l'ocell salta, hi ha canonades i pots puntuar o morir.
-- **Dia 2:** fer-lo **teu** → dibuixos, sons, efectes i dificultat.
+- **Dia 1:** Crear el joc des de zero → programarem el salt de l'ocell, el moviment de les canonades i la creació d'obstacles.
+- **Dia 2:** Plantilla + Personalitzar-lo → usarem la plantilla completa per repassar amb TODOs, afegir-hi funcions extra i canviar dibuixos i sons.
 
-> El joc ja està quasi fet. Avui el completem **junts**, pas a pas.
+> Avui crearem els nostres propis scripts des de zero!
 
-<!-- Expliqueu el format: no s'escriu tot de zero, completem peces concretes. Ho fem en directe tots alhora. -->
+<!-- Expliqueu el format: avui programem els scripts bàsics en blanc per entendre com funciona tot. -->
 
 ---
 
@@ -54,12 +54,12 @@ Un **motor de videojocs**: el programa on muntem el joc.
 
 # Com treballarem avui 🤝
 
-- Hi ha trossos marcats amb **`TODO`** (de l'1 al 7). Cada un, **intenta-ho tu primer**!
-- Després ho posem **en comú** i ho fem junts.
-- **Si et quedes enrere** → tens la `GUIA.md` amb tot el codi. No pateixis.
-- **Si acabes abans** → tens **reptes extra** al final. 🚀
+- Crearem els scripts nosaltres mateixos des de zero.
+- Anirem escrivint el codi pas a pas i ho posarem en comú.
+- **Si et quedes enrere** → recorda que tens la `Guia Flappy Bird` a la web amb tot el codi. No pateixis.
+- **Si acabes abans** → pots començar a dissenyar sprites o provar reptes extra. 🚀
 
-<!-- "Menys mastegat": que ho provin abans de revelar la solució. Triple ritme: intentar-ho / GUIA si s'encallen / reptes per als ràpids. -->
+<!-- Aprenentatge actiu: anar escrivint a la pissarra/projector i que ells repliquin, explicant cada línia (AddForce, velocity, deltaTime...). -->
 
 ---
 
@@ -91,12 +91,14 @@ Farem que el joc cobri vida, peça a peça:
 
 # Ara, tots junts 🎮
 
-Obrim els scripts i anem fent els **TODO en ordre**.
-Després de cada un... ▶️ **Play** per veure el canvi!
+Crearem els fitxers a `Assets/Scripts` i programarem junts pas a pas:
+1. `Bird.cs` (el salt de l'ocell)
+2. `Pipe.cs` (moviment i destruir canonades)
+3. `PipeSpawner.cs` (creació infinita a alçades a l'atzar)
 
-> Si t'encalles: mira la `GUIA.md`, llegeix el missatge vermell de la *Console* i aixeca la mà. 🙋
+> Si t'encalles: consulta la guia de la web, llegeix el missatge vermell de la *Console* i aixeca la mà. 🙋
 
-<!-- Aquí comença el live-coding. Ritme tranquil, comprovant que ningú es queda enrere. -->
+<!-- Aquí comença el live-coding. Ritme molt tranquil, explicant bé on va cada script i com s'assigna als GameObjects. -->
 
 ---
 

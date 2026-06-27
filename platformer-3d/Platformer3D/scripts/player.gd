@@ -104,7 +104,9 @@ func handle_controls(delta):
 
 	var input := Vector3.ZERO
 
-	# TODO: Agafa el Input del jugador
+	# TODO 1: Agafa el Input del jugador
+	input.x = Input.get_axis("move_left", "move_right")
+	input.z = Input.get_axis("move_forward", "move_back")
 
 	input = input.rotated(Vector3.UP, view.rotation.y)
 
@@ -115,7 +117,10 @@ func handle_controls(delta):
 
 	# Jumping
 
-	# TODO: Si s'apreta el botó de saltar crida la funció `jump()`
+	# TODO 2: Si s'apreta el botó de saltar crida la funció `jump()`
+	if Input.is_action_just_pressed("jump"):
+		if jump_single or jump_double:
+			jump()
 
 # Handle gravity
 
@@ -146,4 +151,7 @@ func jump():
 
 # Collecting coins
 
-# TODO: Crea la funció `collect_coin()`
+# TODO 3: Crea la funció `collect_coin()`
+func collect_coin():
+	coins += 1
+	coin_collected.emit(coins)

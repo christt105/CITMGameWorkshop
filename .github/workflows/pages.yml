@@ -32,6 +32,11 @@ jobs:
             npx --yes @marp-team/marp-cli@latest "$f" -o "_site/$name.html" --html --allow-local-files
           done
           cp slides/index.html _site/index.html
+          cp slides/viewer.html _site/viewer.html
+          cp flappy-bird/GUIA.md _site/flappy-bird-guia.md
+          cp flappy-bird/FUNCIONS.md _site/flappy-bird-funcions.md
+          cp platformer-3d/GUIA.md _site/platformer-guia.md
+          cp platformer-3d/MECANIQUES.md _site/platformer-mecaniques.md
           [ -d slides/img ] && cp -r slides/img _site/img || true
 
       - name: Upload Pages artifact

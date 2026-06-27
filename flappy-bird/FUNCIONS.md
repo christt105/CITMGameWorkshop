@@ -3,7 +3,7 @@
 Funcions "de veritat" per afegir el **dia 2**, abans de la part de personalització.
 El **profe en triarà 1 o 2** i les farem **junts** amb tota la classe (no es deixen per fer en solitari: la programació costa massa per anar pel seu compte). La resta queden aquí per si algú vol provar-ne més. Cada recepta diu **on** va i porta el codi.
 
-> Continuem el **mateix projecte** del dia 1. Si no el vas acabar, baixa `FlappyBird-Dia2.zip` (ja té el dia 1 fet) i comença des d'aquí.
+> Treballarem sobre la plantilla del **Dia 2** (`FlappyBird-Dia2.zip`) un cop hàgim completat els TODOs inicials.
 
 ---
 
