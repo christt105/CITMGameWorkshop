@@ -3,6 +3,43 @@ marp: true
 theme: default
 paginate: true
 header: 'Taller: Crea el teu primer videojoc — CITM·UPC'
+style: |
+  section {
+    background-color: #f7f5f0;
+    color: #292524;
+    font-family: system-ui, -apple-system, sans-serif;
+    padding: 40px 60px;
+  }
+  h1 {
+    color: #1c1917;
+    border-bottom: 2px solid #e7e5e4;
+    padding-bottom: 12px;
+  }
+  h2, h3 {
+    color: #1c1917;
+  }
+  strong {
+    color: #4f46e5;
+  }
+  a {
+    color: #4f46e5;
+  }
+  code {
+    background-color: #e7e5e4;
+    color: #b91c1c;
+    border-radius: 6px;
+    padding: 2px 8px;
+  }
+  blockquote {
+    background: #f5f5f4;
+    border-left: 6px solid #4f46e5;
+    color: #44403c;
+    border-radius: 0 12px 12px 0;
+    padding: 10px 20px;
+  }
+  footer, header {
+    color: #78716c;
+  }
 ---
 
 <!-- _paginate: false -->
