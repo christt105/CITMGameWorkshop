@@ -19,10 +19,10 @@ Avui farem el nostre primer joc... i funcionarà de veritat!
 
 # Què farem aquests 2 dies?
 
-- **Dia 1:** muntar el Flappy Bird → l'ocell salta, hi ha canonades i pots puntuar o morir.
+- **Dia 1:** muntar el Flappy Bird → l'ocell salta, hi ha canonades i pots puntuar o perdre.
 - **Dia 2:** fer-lo **teu** → dibuixos, sons, efectes i dificultat.
 
-> El joc ja està quasi fet. Avui el completem **junts**, pas a pas.
+
 
 <!-- Expliqueu el format: no s'escriu tot de zero, completem peces concretes. Ho fem en directe tots alhora. -->
 

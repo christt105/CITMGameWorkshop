@@ -27,7 +27,8 @@ Christian Martínez De La Rosa
 
 > Jugar a videojocs pot ser **diferent** a crear-los.
 
-![h:240px](img/intro/image9.png)![h:240px](img/intro/minecraft.png)
+![100% bg right](img/intro/image9.png) 
+![80% bg right](img/intro/minecraft.png)
 
 <!-- Trenca-gel. Deixeu que responguin en veu alta, creeu ambient. -->
 
@@ -37,7 +38,7 @@ Christian Martínez De La Rosa
 
 Coneixeu algun d'aquests?
 
-![h:230px](img/intro/image10.png) ![h:230px](img/intro/image8.gif) ![h:230px](img/intro/image15.png)
+![90% bg vertical right](img/intro/image10.png) ![auto bg](img/intro/image8.gif) ![](img/intro/image15.png)
 
 <!-- Ensenyeu els vostres jocs preferits. Connecteu amb els seus. -->
 
@@ -50,7 +51,7 @@ Coneixeu algun d'aquests?
 - Quines **parts** té?
 - Qui hi **participa**?
 
-![h:300px](img/intro/image13.png)
+![100% bg right](img/intro/image13.png)
 
 <!-- Llanceu les 4 preguntes i que provin de respondre abans de passar a les respostes. -->
 
@@ -74,7 +75,7 @@ Coneixeu algun d'aquests?
 
 > Avui **partirem de zero**. 🙂
 
-![h:300px](img/intro/image6.png) ![h:300px](img/intro/image2.png)
+![h:300px bg right](img/intro/image6.png) ![h:300px](img/intro/image2.png)
 
 <!-- Mesureu el nivell de la sala. Tranquil·litzeu els qui no han programat mai. -->
 
@@ -84,7 +85,7 @@ Coneixeu algun d'aquests?
 
 Què són? Programes que ens donen fet allò difícil (física, gràfics, sons...) perquè ens centrem a **crear el joc**.
 
-![h:150px](img/intro/image5.png) ![h:150px](img/intro/image12.png) ![h:150px](img/intro/image1.png)
+![h:150px bg right](img/intro/image5.png) ![h:150px bg](img/intro/image12.png) ![h:150px bg vertical](img/intro/image1.png)
 
 <!-- Definiu "motor" amb una analogia senzilla (com una cuina ja muntada). Avui: Unity i Godot. -->
 
@@ -92,11 +93,11 @@ Què són? Programes que ens donen fet allò difícil (física, gràfics, sons..
 
 # Què farem?
 
-- 🐦 **Flappy Bird** ![h:30](img/intro/image12.png) - 2 dies
-- 🧱 **Plataformes 3D** ![h:30](img/intro/image1.png) - 2 dies
+- **Flappy Bird** ![h:30](img/intro/image12.png) - 2 dies
+- **Plataformes 3D** ![h:30](img/intro/image1.png) - 2 dies
 
 
-![h:300px](img/intro/flappy_bird.png) ![h:300px](img/intro/platformer3D.png)
+![cover bg](img/intro/flappy_bird.png) ![cover bg right](img/intro/platformer3D.png)
 
 <!--   -->
 
