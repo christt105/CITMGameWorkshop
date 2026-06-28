@@ -116,19 +116,30 @@ func _on_body_entered(body):
 
 ---
 
-## 💨 6. Córrer (sprint)
+## ⚡ 6. Super salt temporal (Power-up)
 
-**Objectiu:** anar més ràpid prement una tecla.
+**Objectiu:** un objecte que, en agafar-lo, fa que el jugador salti molt més alt durant 5 segons.
 
-1. A **Proyecto → Ajustes del proyecto → Mapa de entrada**, crea una acció `sprint` (per exemple, tecla Shift).
-2. A `player.gd`, dins de `handle_controls`, on calcula `movement_velocity`:
+1. Crea una escena amb un node arrel **`Area3D`**, posa-hi un model (per exemple, una moneda d'un altre color o un cub brillant) i un `CollisionShape3D` amb `Is Trigger`.
+2. A `player.gd`, afegeix aquesta funció per activar el súper salt temporitzat:
 
 ```gdscript
-var velocitat_final = movement_speed
-if Input.is_action_pressed("sprint"):
-    velocitat_final *= 1.6
+func activate_super_jump():
+    jump_strength *= 1.5                # augmenta la força del salt un 50%
+    Audio.play("res://sounds/coin.ogg") # so de confirmació
+    await get_tree().create_timer(5.0).timeout
+    jump_strength /= 1.5                # torna a la normalitat
+```
 
-movement_velocity = input * velocitat_final * delta
+3. Script de l'objecte Area3D (connectant el senyal `body_entered`):
+
+```gdscript
+extends Area3D
+
+func _on_body_entered(body):
+    if body.has_method("activate_super_jump"):
+        body.activate_super_jump()
+        queue_free()                   # esborra el power-up de l'escena
 ```
 
 ---

@@ -43,7 +43,7 @@ Canviem de motor i saltem a les 3 dimensions!
 
 # Obrim el projecte
 
-1. Obre **Godot 4.6**.
+1. Obre **Godot 4.7**.
 2. *Importar* → tria el fitxer `project.godot` de `Platformer3D`.
 3. Prem ▶️ **Play**: el personatge encara no es mou. Ho arreglem!
 
@@ -56,7 +56,7 @@ Canviem de motor i saltem a les 3 dimensions!
 # Com treballarem avui 🤝
 
 - Ho fem **junts**, pas a pas.
-- Omplim uns trossos marcats amb **`TODO`** (de l'A a l'E).
+- Omplim uns trossos marcats amb **`TODO`** (de l'A a l'F).
 - **Si et quedes enrere** → tens la `GUIA.md` amb tot el codi.
 - **Si acabes abans** → **reptes extra** al final. 🚀
 
@@ -70,8 +70,9 @@ Donarem vida al personatge, peça a peça:
 
 - 🕹️ **A** — moure's amb el teclat.
 - 🦘 **B** — **saltar** (i **doble salt**!).
-- 🪙 **C + D** — agafar **monedes** i comptar-les.
-- 😱 **E** — **plataformes que cauen** en trepitjar-les.
+- 🏃 **C** — **córrer (sprint)** amb la tecla Shift.
+- 🪙 **D + E** — agafar **monedes** i comptar-les.
+- 😱 **F** — **plataformes que cauen** en trepitjar-les.
 
 <!-- Llista de la sessió = TODO A-E en llenguatge normal. Aneu marcant-los a mesura. -->
 
@@ -89,7 +90,7 @@ Donarem vida al personatge, peça a peça:
 
 # Ara, tots junts 🎮
 
-Obrim els scripts i fem els **TODO A → E en ordre**.
+Obrim els scripts i fem els **TODO A → F en ordre**.
 Després de cada un... ▶️ **Play**!
 
 > Si t'encalles: vigila la **tabulació**, mira la finestra *Output* i aixeca la mà. 🙋

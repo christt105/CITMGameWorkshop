@@ -19,12 +19,12 @@ Avui farem el nostre primer joc... i funcionarà de veritat!
 
 # Què farem aquests 2 dies?
 
-- **Dia 1:** muntar el Flappy Bird → l'ocell salta, hi ha canonades i pots puntuar o perdre.
-- **Dia 2:** fer-lo **teu** → dibuixos, sons, efectes i dificultat.
+- **Dia 1:** Crear el joc des de zero → programarem el salt de l'ocell, el moviment de les canonades i la creació d'obstacles.
+- **Dia 2:** Plantilla + Personalitzar-lo → usarem la plantilla completa per repassar amb TODOs, afegir-hi funcions extra i canviar dibuixos i sons.
 
+> Avui crearem els nostres propis scripts des de zero!
 
-
-<!-- Expliqueu el format: no s'escriu tot de zero, completem peces concretes. Ho fem en directe tots alhora. -->
+<!-- Expliqueu el format: avui programem els scripts bàsics en blanc per entendre com funciona tot. -->
 
 ---
 
@@ -54,27 +54,24 @@ Un **motor de videojocs**: el programa on muntem el joc.
 
 # Com treballarem avui 🤝
 
-- Hi ha trossos marcats amb **`TODO`** (de l'1 al 7). Cada un, **intenta-ho tu primer**!
-- Després ho posem **en comú** i ho fem junts.
-- **Si et quedes enrere** → tens la `GUIA.md` amb tot el codi. No pateixis.
-- **Si acabes abans** → tens **reptes extra** al final. 🚀
+- Crearem els scripts nosaltres mateixos des de zero.
+- Anirem escrivint el codi pas a pas i ho posarem en comú.
+- **Si et quedes enrere** → recorda que tens la `Guia Flappy Bird` a la web amb tot el codi. No pateixis.
+- **Si acabes abans** → pots començar a dissenyar sprites o provar reptes extra. 🚀
 
-<!-- "Menys mastegat": que ho provin abans de revelar la solució. Triple ritme: intentar-ho / GUIA si s'encallen / reptes per als ràpids. -->
+<!-- Aprenentatge actiu: anar escrivint a la pissarra/projector i que ells repliquin, explicant cada línia (AddForce, velocity, deltaTime...). -->
 
 ---
 
 # El repte d'avui 🎯
 
-Farem que el joc cobri vida, peça a peça:
+Farem que el joc cobri vida, pas a pas:
 
-1. 🐤 L'ocell **salta** quan premem.
-2. ⭐ **Sumar un punt** en passar una canonada.
-3. 💥 **Morir** en xocar.
-4. 🟩 Les canonades **es mouen** i desapareixen.
-5. ➕ Apareixen **canonades noves** soles.
-6. 🔢 El **marcador** compta.
+1. 🐤 L'ocell **salta** quan premem la barra espaiadora.
+2. 🟩 Les canonades **es mouen** cap a l'esquerra i **desapareixen** al final.
+3. ➕ Les canonades **apareixen soles** cada cert temps a alçades a l'atzar.
 
-<!-- Aquesta és la llista de la sessió = els 7 TODO en llenguatge normal. Aneu marcant-los a mesura que els feu. -->
+<!-- Aquesta és la llista de la sessió. Primer farem el salt, després el moviment i destrucció de canonades, i finalment el generador automàtic. -->
 
 ---
 
@@ -91,12 +88,14 @@ Farem que el joc cobri vida, peça a peça:
 
 # Ara, tots junts 🎮
 
-Obrim els scripts i anem fent els **TODO en ordre**.
-Després de cada un... ▶️ **Play** per veure el canvi!
+Crearem els fitxers a `Assets/Scripts` i programarem junts pas a pas:
+1. `Bird.cs` (el salt de l'ocell)
+2. `Pipe.cs` (moviment i destruir canonades)
+3. `PipeSpawner.cs` (creació infinita a alçades a l'atzar)
 
-> Si t'encalles: mira la `GUIA.md`, llegeix el missatge vermell de la *Console* i aixeca la mà. 🙋
+> Si t'encalles: consulta la guia de la web, llegeix el missatge vermell de la *Console* i aixeca la mà. 🙋
 
-<!-- Aquí comença el live-coding. Ritme tranquil, comprovant que ningú es queda enrere. -->
+<!-- Aquí comença el live-coding. Ritme molt tranquil, explicant bé on va cada script i com s'assigna als GameObjects. -->
 
 ---
 
@@ -104,14 +103,13 @@ Després de cada un... ▶️ **Play** per veure el canvi!
 
 # 🚀 Reptes extra
 
-Has acabat els 7 TODO? Prova això:
+Has acabat de programar-ho tot? Prova això:
 
-- Fes que les canonades vagin **més ràpides** com més punts tens.
 - Fes sonar un **so** quan l'ocell salta.
-- Canvia el **dibuix** de l'ocell o el fons.
+- Canvia el **dibuix** de l'ocell o el fons a l'editor d'Unity.
 - Inventa: què faria el teu joc **diferent**?
 
-<!-- Per als ràpids. Són un tast del dia 2. No cal solució a la slide: que experimentin (GUIA i Inspector). -->
+<!-- Per als ràpids. No cal solució a la slide: que experimentin amb l'Inspector o afegint recursos. -->
 
 ---
 

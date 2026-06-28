@@ -104,18 +104,42 @@ func handle_controls(delta):
 
 	var input := Vector3.ZERO
 
-	# TODO: Agafa el Input del jugador
+	# TODO 1: Agafa el Input del jugador (tecles WASD / fletxes)
+	#   - Llegim els eixos de control horitzontal (X) i vertical (Z) i els assignem a 'input.x' i 'input.z'.
+	#   - Utilitza la funció: Input.get_axis("accio_negativa", "accio_positiva")
+	#   - Eix X: "move_left" i "move_right". Eix Z: "move_forward" i "move_back".
+	# <SOL>
+	input.x = Input.get_axis("move_left", "move_right")
+	input.z = Input.get_axis("move_forward", "move_back")
+	# </SOL>
 
 	input = input.rotated(Vector3.UP, view.rotation.y)
 
 	if input.length() > 1:
 		input = input.normalized()
 
-	movement_velocity = input * movement_speed * delta
+	var speed_multiplier = 1.0
+	# TODO 3: Fes que el jugador corri més ràpid si es prem la tecla Shift (multiplica speed_multiplier per 1.6)
+	#   - Comprova si la tecla Shift es troba premuda utilitzant: Input.is_key_pressed(KEY_SHIFT)
+	#   - Si és així, assigna a la variable 'speed_multiplier' el valor de 1.6.
+	# <SOL>
+	if Input.is_key_pressed(KEY_SHIFT):
+		speed_multiplier = 1.6
+	# </SOL>
+
+	movement_velocity = input * movement_speed * speed_multiplier * delta
 
 	# Jumping
 
-	# TODO: Si s'apreta el botó de saltar crida la funció `jump()`
+	# TODO 2: Si s'apreta el botó de saltar ("jump") crida la funció `jump()`
+	#   - Fes servir un condicional per detectar el botó de salt: if Input.is_action_just_pressed("jump"):
+	#   - Si encara tenim salts disponibles (si la variable 'jump_single' o 'jump_double' són certs),
+	#     crida la funció per saltar: jump()
+	# <SOL>
+	if Input.is_action_just_pressed("jump"):
+		if jump_single or jump_double:
+			jump()
+	# </SOL>
 
 # Handle gravity
 
@@ -146,4 +170,12 @@ func jump():
 
 # Collecting coins
 
-# TODO: Crea la funció `collect_coin()`
+# TODO 4: Crea la funció `collect_coin()` que sumi 1 a les monedes (`coins`) i emeti el senyal `coin_collected` passant el número actual
+#   - Crea la funció amb la sintaxi: func collect_coin():
+#   - Incrementa el valor de 'coins' en 1.
+#   - Envia el senyal avisant del canvi de puntuació mitjançant: coin_collected.emit(coins)
+# <SOL>
+func collect_coin():
+	coins += 1
+	coin_collected.emit(coins)
+# </SOL>

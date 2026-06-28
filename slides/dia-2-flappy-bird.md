@@ -17,14 +17,13 @@ Avui afegim **funcions noves** i el fem **únic**.
 
 ---
 
-# Repàs ràpid del dia 1
+# Com comencem avui? 🚀
 
-- L'ocell **salta**, les canonades **es mouen** i **es creen** soles.
-- Puntuem i morim amb les **etiquetes**.
+- Descarrega el fitxer **`FlappyBird-Dia2.zip`** des de la web del taller.
+- Aquest projecte conté tota la part visual, els menús i el marcador configurats, però els scripts estan buits (**TODOs 1 al 7**).
+- Completarem els TODOs plegats per repassar el Dia 1 i fer que el joc funcioni.
 
-> No vas acabar el dia 1? Baixa **`FlappyBird-Dia2.zip`** (ja té el dia 1 fet) i continua des d'aquí. Ningú es queda enrere.
-
-<!-- IMPORTANT: el ZIP "Dia 2" és la xarxa de seguretat. Que els endarrerits el facin servir per anar tots a una. -->
+<!-- Comenceu tots des del ZIP del Dia 2. Així tothom té exactament el mateix punt de partida net i funcional per afegir extres. -->
 
 ---
 
@@ -64,7 +63,7 @@ Si va bé i hi ha temps, també podem afegir:
 - 🌄 **Fons en moviment** (parallax)
 - ✨ **Juice**: partícules, sons, sacsejada en morir
 
-> Pregunta'm la que vulguis muntar: tinc el codi preparat.
+> Pregunta al professor si tens qualsevol dubte o vols idear una funció nova!
 
 <!-- Reserveu temps per a aquestes als qui van ràpids. Són un bon "repte extra". -->
 
@@ -95,13 +94,13 @@ Si va bé i hi ha temps, també podem afegir:
 
 # Ara et toca a tu 🎮
 
-- **1r** (junts) hem afegit les funcions noves.
-- **Ara** personalitza'l **al teu gust i al teu ritme**.
-- Prova sovint amb ▶️ **Play**.
+- **1r:** Hem completat els TODOs per tenir la base.
+- **2n (junts):** Hem afegit les funcions extra de la web (`FUNCIONS.md`).
+- **Ara:** Personalitza'l al teu gust, canvia sprites, ajusta valors i experimenta!
 
 > És **difícil** fer jocs. Equivocar-se és part del joc.
 
-<!-- La 2a part és la lliure: cadascú personalitza. Els ràpids no s'avorreixen perquè la creativitat no té límit. -->
+<!-- Fase de creació lliure: personalitzar o provar més funcions de la guia web. Doneu suport individual. -->
 
 ---
 

@@ -1,36 +1,66 @@
 # 🐦 Guia del Flappy Bird (Unity)
 
-Benvingut/da! En aquests **2 dies** faràs el teu propi Flappy Bird amb **Unity**.
-El projecte ja està quasi fet: només has d'omplir uns quants **`TODO`** (trossos de codi que falten). Cada `TODO` té una **pista** amb el codi gairebé escrit.
-
-> 💡 Un `TODO` és un comentari que vol dir "aquí falta feina". Els trobaràs escrivint `TODO` a la barra de cerca del teu editor de codi.
+Benvingut/da! En aquest taller de **2 dies** faràs el teu propi Flappy Bird amb **Unity**.
 
 ---
 
-## Què faràs
+## Com ens organitzarem:
 
-- **Dia 1:** muntar el joc → l'ocell salta, les canonades es mouen i pots morir o puntuar.
-- **Dia 2:** fer-lo **teu** → canviar dibuixos, afegir sons, efectes i dificultat.
-
----
-
-## Abans de començar
-
-1. Obre **Unity Hub** i obre el projecte de la carpeta `FlappyBird/FlappyBirdWorkshop`.
-2. A baix, a la finestra **Project**, obre `Assets/Scenes/SampleScene`.
-3. Dalt de tot, prem el botó ▶️ **Play** per provar. Encara no funcionarà del tot: ara ho arreglarem!
-4. Els scripts (el codi) són a `Assets/Scripts`. Fes doble clic per obrir-los.
+* **Dia 1: Joc des de zero** 🏗️
+  Comencem amb un projecte net (només amb els dibuixos preparats). Crearem l'escena, afegirem la física i programarem des de zero el moviment de l'ocell, de les canonades i la creació automàtica d'obstacles.
+* **Dia 2: Plantilla, TODOs i Personalització** 🎨
+  Descarregarem una plantilla completa (`FlappyBird-Dia2.zip`) amb la interfície gràfica, el marcador i el menú a punt. Completarem ràpidament els codis que hi falten (marcats com a **`TODO`**) com a repàs del Dia 1, i dedicarem la resta del temps a afegir funcions extra (escuts, monedes, dificultat) i a personalitzar-lo completament amb els teus propis dibuixos i sons.
 
 ---
 
-## DIA 1 — Fem que funcioni
+## 🏗️ DIA 1 — Creem el joc des de zero
 
-Fes els `TODO` **en ordre**, de l'1 al 7. Després de cada un, prem ▶️ **Play** per veure el canvi.
+Avui obrirem la carpeta del projecte `FlappyBird-2026` (que conté els dibuixos / *sprites*, però cap codi, prefab o escena). Farem el següent pas a pas amb el professor:
 
-### 🟢 TODO 1 — Fer saltar l'ocell  (`Bird.cs`)
+### 1. Fer saltar l'ocell (`Bird.cs`)
+Crearem un objecte per a l'ocell, li afegirem un component `Rigidbody2D` (per a la gravetat) i un script anomenat `Bird.cs`. El codi per fer-lo saltar quan premem l'espai és:
+```csharp
+if (Input.GetButtonDown("Jump"))
+{
+    _rigidbody2D.velocity = Vector2.zero; // Atura la velocitat de caiguda anterior
+    _rigidbody2D.AddForce(Vector2.up * force, ForceMode2D.Impulse); // Empenta cap amunt
+}
+```
 
-Volem que, quan premis la tecla de salt (barra espaiadora), l'ocell pugi.
+### 2. Moure les canonades (`Pipe.cs`)
+Crearem un script `Pipe.cs` i l'afegirem a les canonades per fer que es moguin cap a l'esquerra:
+```csharp
+transform.position += Vector3.left * (speed * Time.deltaTime);
+```
+I per evitar que s'acumulin a l'infinit, les destruirem quan surtin per l'esquerra de la pantalla:
+```csharp
+if (transform.position.x < destroyPoint)
+{
+    Destroy(gameObject);
+}
+```
 
+### 3. Generar canonades infinites (`PipeSpawner.cs`)
+Crearem un script `PipeSpawner.cs` en un objecte generador perquè creï còpies dels prefabs de les canonades a una alçada aleatòria cada cert temps:
+```csharp
+if (_timer > spawnRate)
+{
+    _timer = 0f;
+    Vector2 spawnPosition = new Vector2(start.position.x, Random.Range(start.position.y, end.position.y));
+    Instantiate(pipesPrefab, spawnPosition, Quaternion.identity); // Crea una canonada nova
+}
+```
+
+---
+
+## 🎨 DIA 2 — La plantilla i personalització
+
+Avui tothom descarrega la plantilla de seguretat **`FlappyBird-Dia2.zip`** i l'obre amb Unity Hub. Aquest projecte ja té tots els menús, escenes, col·lisions i el marcador completament dissenyats. 
+
+Per fer que funcioni, només has d'obrir els scripts i reomplir els **`TODO`** del 1 al 7 (el codi és exactament el mateix que vam fer el Dia 1!).
+
+### 🟢 TODO 1 — Fer saltar l'ocell (`Bird.cs`)
+Quan premis la tecla de salt (barra espaiadora), l'ocell ha de pujar.
 ```csharp
 if (Input.GetButtonDown("Jump"))
 {
@@ -39,15 +69,8 @@ if (Input.GetButtonDown("Jump"))
 }
 ```
 
-**Què fa?**
-- `Input.GetButtonDown("Jump")` → comprova si has premut el botó de saltar.
-- `velocity = Vector2.zero` → atura l'ocell (oblida la velocitat d'abans).
-- `AddForce(... up ...)` → li dona una empenta cap amunt. ⬆️
-
-### 🟢 TODO 2 — Sumar un punt  (`Bird.cs`)
-
-Quan l'ocell passa entre dues canonades, toca un objecte invisible amb l'etiqueta `Point`.
-
+### 🟢 TODO 2 — Sumar un punt (`Bird.cs`)
+Quan l'ocell passa entre les canonades, toca un sensor invisible amb el tag `Point`.
 ```csharp
 if (other.CompareTag("Point"))
 {
@@ -55,10 +78,8 @@ if (other.CompareTag("Point"))
 }
 ```
 
-### 🟢 TODO 3 — Morir en xocar  (`Bird.cs`)
-
-Si l'ocell toca una canonada o el terra (etiqueta `Obstacle`), s'acaba la partida.
-
+### 🟢 TODO 3 — Morir en xocar (`Bird.cs`)
+Si l'ocell toca una canonada o el terra (tag `Obstacle`), s'acaba la partida.
 ```csharp
 if (other.CompareTag("Obstacle"))
 {
@@ -67,20 +88,14 @@ if (other.CompareTag("Obstacle"))
 }
 ```
 
-### 🟢 TODO 4 — Moure les canonades  (`Pipe.cs`)
-
-Les canonades han d'anar cap a l'esquerra perquè sembli que l'ocell avança.
-
+### 🟢 TODO 4 — Moure les canonades (`Pipe.cs`)
+Les canonades s'han de moure cap a l'esquerra.
 ```csharp
 transform.position += Vector3.left * (speed * Time.deltaTime);
 ```
 
-> 💡 `Time.deltaTime` fa que el moviment vagi igual de ràpid a tots els ordinadors.
-
-### 🟢 TODO 5 — Esborrar canonades  (`Pipe.cs`)
-
-Quan una canonada surt per l'esquerra de la pantalla, l'eliminem perquè no s'acumulin.
-
+### 🟢 TODO 5 — Esborrar canonades (`Pipe.cs`)
+Quan surtin de la pantalla (x < destroyPoint), les eliminem.
 ```csharp
 if (transform.position.x < destroyPoint)
 {
@@ -88,10 +103,8 @@ if (transform.position.x < destroyPoint)
 }
 ```
 
-### 🟢 TODO 6 — Crear canonades  (`PipeSpawner.cs`)
-
-Cada cert temps creem una canonada nova a una alçada a l'atzar.
-
+### 🟢 TODO 6 — Crear canonades (`PipeSpawner.cs`)
+Creem una canonada nova a una alçada aleatòria cada vegada que el temporitzador supera el `spawnRate`.
 ```csharp
 if (_timer > spawnRate)
 {
@@ -101,52 +114,33 @@ if (_timer > spawnRate)
 }
 ```
 
-**Què fa?**
-- `Random.Range(...)` → tria una alçada a l'atzar entre dos punts (`start` i `end`).
-- `Instantiate(...)` → crea una còpia nova de la canonada al joc.
-
-### 🟢 TODO 7 — El marcador  (`GameManager.cs`)
-
+### 🟢 TODO 7 — El marcador (`GameManager.cs`)
 Cada vegada que sumem un punt, actualitzem el número de la pantalla.
-
 ```csharp
 _score += 1;
 scoreText.text = _score.ToString();
 ```
 
-✅ **Felicitats!** Ja tens un Flappy Bird que funciona. Prova'l!
+---
+
+## 🛠️ Afegim funcions noves (Junts a classe)
+
+El professor triarà **1 o 2 funcions de la guia de `FUNCIONS.md`** i les programarem junts a la pissarra:
+* 🔥 **Dificultat creixent** (les canonades van més ràpid a mesura que sumes punts).
+* 🛡️ **Power-up d'escut** (xoca una vegada sense morir).
+* 🪙 **Monedes** que donen punts extra.
+* 🐢 **Mode lent (bullet time)** quan prems Shift.
+* 🏅 **Medalles** d'or, plata i bronze a la pantalla de Game Over.
 
 ---
 
-## DIA 2 — Afegim funcions i el fem nostre
+## 🎨 Fes-lo teu (Al teu ritme!)
 
-> No vas acabar el dia 1? Baixa **`FlappyBird-Dia2.zip`** (ja té el dia 1 fet) i continua des d'aquí.
+Aquí tens llibertat total per personalitzar el joc:
+* **Canvia el dibuix de l'ocell:** Arrossega una imatge nova a la carpeta `Assets/Sprites` i posa-la al *Sprite Renderer* del teu ocell.
+* **Canvia el fons o el color de les canonades.**
+* **Ajusta la gravetat i el salt:** Canvia el valor `force` de l'script `Bird` des de l'Inspector d'Unity.
+* **Canvia la velocitat de les canonades:** Ajusta el valor `speed` de l'script `Pipe`.
+* **Afegeix efectes:** Sons al saltar, música de fons, partícules en guanyar punts, etc.
 
-### 1a part — Funcions noves (les fem JUNTS) 🛠️
-
-El profe triarà **1 o 2 funcions** i les farem entre tots, pas a pas. El codi és a **`FUNCIONS.md`**. Algunes idees:
-- 🔥 **Dificultat creixent** (com més punts, més difícil).
-- 🛡️ **Power-up d'escut** (xoca una vegada sense morir).
-- 🪙 **Monedes** que donen punts extra.
-
-Així el dia 2 també té programació de veritat, no només decoració.
-
-### 2a part — Personalitza'l (al teu ritme) 🎨
-
-Aquí cadascú va al seu aire. **No cal fer-ho tot**, tria el que més t'agradi:
-- **Canvia el dibuix de l'ocell:** porta una imatge nova a `Assets` i posa-la al `Sprite Renderer`.
-- **Canvia el fons i el color de les canonades.**
-- **Fes l'ocell més lleuger o més pesat:** valor `force` de l'script `Bird` (a l'Inspector).
-- **Canvia la velocitat de les canonades:** valor `speed` de l'script `Pipe`.
-- **Sons** al saltar i al morir, **partícules** en puntuar, un **tema** (nit, espai...).
-
-> 🏆 Al final del dia 2 ensenyarem els jocs a la classe. Cada Flappy Bird serà diferent!
-
----
-
-## Si et quedes encallat/da
-
-1. Llegeix el missatge vermell de la **Console** (a baix). Sol dir la línia de l'error.
-2. Comprova que has copiat el codi **dins** de les claus `{ }` correctes.
-3. A C# cada línia acaba amb **`;`** (punt i coma).
-4. Pregunta al professor 🙋
+> 🏆 **Showcase final:** Al final del taller, cadascú ensenyarà el seu joc a la classe. Fes que sigui uniquíssim!

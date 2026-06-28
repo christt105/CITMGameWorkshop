@@ -1,7 +1,7 @@
 # 🧱 Guia del Plataformes 3D (Godot)
 
 En aquests **2 dies** faràs un joc de plataformes en 3D amb **Godot 4**.
-Primer faràs que el personatge es mogui i salti, i després **dissenyaràs el teu propi nivell** per jugar-lo amb els companys.
+Primer faràs que el personatge es mogui, corri i salti, i després **dissenyaràs el teu propi nivell** per jugar-lo amb els companys.
 
 > 💡 Igual que al Flappy Bird, el projecte ja està quasi fet. Has d'omplir uns quants **`TODO`** al codi. Cada `TODO` té una pista.
 
@@ -9,14 +9,14 @@ Primer faràs que el personatge es mogui i salti, i després **dissenyaràs el t
 
 ## Què faràs
 
-- **Dia 1 (Godot):** entendre Godot i programar el personatge → moure's, saltar, **doble salt**, agafar monedes i plataformes que cauen.
-- **Dia 2:** **dissenyar el teu nivell** (col·locar plataformes, monedes, la bandera de meta) i jugar els nivells dels companys. 🎉
+* **Dia 1 (Godot):** entendre Godot i programar el personatge → moure's, saltar, **doble salt**, **córrer (sprint)**, agafar monedes i plataformes que cauen.
+* **Dia 2:** **dissenyar el teu nivell** (col·locar plataformes, monedes, la bandera de meta, molles i perills) i jugar els nivells dels companys. 🎉
 
 ---
 
 ## Abans de començar
 
-1. Obre **Godot 4.6** i importa el projecte de la carpeta `Platformer3D` (tria el fitxer `project.godot`).
+1. Obre **Godot 4.7** i importa el projecte de la carpeta `Platformer3D` (tria el fitxer `project.godot`).
 2. A dalt a la dreta prem ▶️ **Play** per provar. El personatge encara no es mou: ho arreglarem!
 3. Els scripts són a les carpetes `scripts/` i `objects/`. Fes doble clic per obrir-los.
 
@@ -26,9 +26,9 @@ Primer faràs que el personatge es mogui i salti, i després **dissenyaràs el t
 
 ## DIA 1 — Programem el personatge
 
-### 🟢 TODO A — Moure el personatge  (`scripts/player.gd`)
+### 🟢 TODO A — Moure el personatge (`scripts/player.gd`)
 
-Busca `# TODO: Agafa el Input del jugador` dins de `handle_controls`. Llegim les tecles WASD / fletxes:
+Busca `# TODO 1: Agafa el Input del jugador` dins de `handle_controls`. Llegim les tecles WASD / fletxes:
 
 ```gdscript
 input.x = Input.get_axis("move_left", "move_right")
@@ -37,9 +37,9 @@ input.z = Input.get_axis("move_forward", "move_back")
 
 **Què fa?** `get_axis` torna -1, 0 o 1 segons quina tecla premis. Així sabem cap a on vol anar el jugador. (La línia de sota, `input.rotated(...)`, fa que es mogui respecte a on mira la càmera.)
 
-### 🟢 TODO B — Saltar i doble salt  (`scripts/player.gd`)
+### 🟢 TODO B — Saltar i doble salt (`scripts/player.gd`)
 
-Busca `# TODO: Si s'apreta el botó de saltar...` (també dins de `handle_controls`):
+Busca `# TODO 2: Si s'apreta el botó de saltar...` (també dins de `handle_controls`):
 
 ```gdscript
 if Input.is_action_just_pressed("jump"):
@@ -47,11 +47,22 @@ if Input.is_action_just_pressed("jump"):
         jump()
 ```
 
-**Què fa?** Si premem saltar i encara ens queda salt (de terra `jump_single` o a l'aire `jump_double`), cridem la funció `jump()`, que ja està feta. Això dona el **doble salt** gratis! 🦘
+**Què fa?** Si premem saltar (barra espaiadora) i encara ens queda salt (de terra `jump_single` o a l'aire `jump_double`), cridem la funció `jump()`, que ja està feta. Això dona el **doble salt** gratis! 🦘
 
-### 🟢 TODO C — Agafar monedes  (`scripts/player.gd`)
+### 🟢 TODO C — Córrer / Sprint (`scripts/player.gd`)
 
-Al final de l'script hi ha `# TODO: Crea la funció collect_coin()`. Escriu la funció nova:
+Busca `# TODO 3: Fes que el jugador corri més ràpid si es prem la tecla Shift` dins de `handle_controls`:
+
+```gdscript
+if Input.is_key_pressed(KEY_SHIFT):
+    speed_multiplier = 1.6
+```
+
+**Què fa?** Comprovem si el jugador està prement la tecla Shift de l'esquerra. Si és així, canviem el multiplicador de velocitat a `1.6`, fent que el personatge vagi molt més de pressa. 🏃💨
+
+### 🟢 TODO D — Agafar monedes (`scripts/player.gd`)
+
+Al final de l'script hi ha `# TODO 4: Crea la funció collect_coin()`. Escriu la funció nova:
 
 ```gdscript
 func collect_coin():
@@ -59,15 +70,11 @@ func collect_coin():
     coin_collected.emit(coins)
 ```
 
-**Important:** perquè el comptador rebi el número, comprova que a dalt de tot de l'script el senyal estigui declarat amb el paràmetre:
+**Important:** perquè el comptador rebi el número, comprova que a dalt de tot de l'script el senyal estigui declarat amb el paràmetre: `signal coin_collected(coins)`.
 
-```gdscript
-signal coin_collected(coins)
-```
+### 🟢 TODO E — El comptador de monedes (`scripts/hud.gd`)
 
-### 🟢 TODO D — El comptador de monedes  (`scripts/hud.gd`)
-
-Busca `# TODO: Actualitza el número de monedes`:
+Busca `# TODO 5: Actualitza el número de monedes a la interfície`:
 
 ```gdscript
 func _on_coin_collected(coins):
@@ -81,27 +88,27 @@ func _on_coin_collected(coins):
 
 Ara, en agafar una moneda, el número pujarà. 🪙
 
-### 🟢 TODO E — Plataformes que cauen  (`objects/platform_falling.gd`)
+### 🟢 TODO F — Plataformes que cauen (`objects/platform_falling.gd`)
 
 Aquesta plataforma cau quan el jugador la trepitja.
 
-1. Busca `# TODO: Fes que caigui` dins de `_process` i posa:
+1. Busca `# TODO 6: Fes que caigui la plataforma si s'ha activat 'falling'` dins de `_process` i posa:
 
 ```gdscript
 if falling:
-    gravity += 25 * delta
+    gravity += falling_speed * delta
     position.y -= gravity * delta
 ```
 
-2. Busca `# TODO: al jugador fer col·lisió, activa el falling` dins de `_on_body_entered` i posa:
+2. Busca `# TODO 7: Quan el jugador toqui la plataforma, activa la variable 'falling'` dins de `_on_body_entered` i posa:
 
 ```gdscript
 falling = true
 ```
 
-**Què fa?** Quan el jugador la toca, `falling` es posa a cert i la plataforma comença a caure cada cop més ràpid (gravetat). 😱
+**Què fa?** Quan el jugador la toca, `falling` es posa a cert (`true`) i la plataforma comença a caure cada cop més ràpid (gravetat). 😱
 
-✅ **Felicitats!** Ja tens un joc de plataformes amb moviment, doble salt, monedes i plataformes que cauen.
+✅ **Felicitats!** Ja tens un joc de plataformes complet amb moviment, doble salt, sprint, monedes i plataformes mòbils que cauen.
 
 ---
 
@@ -116,14 +123,14 @@ Avui el protagonista ets tu: construeix el teu nivell i després jugarem els de 
 4. Repeteix per construir el teu recorregut: plataformes, monedes, núvols, plataformes que cauen...
 
 ### Posa una **meta** 🏁
-- A la carpeta `models/` hi ha `flag.glb` (una bandera). Arrossega-la a l'escena al final del recorregut perquè sigui l'objectiu.
-- Demana al profe la mecànica de "tocar la bandera = guanyar" (mira el [[Banc de mecaniques extra del platformer - m7n8b2]]).
+* A la carpeta `models/` hi ha `flag.glb` (una bandera). Arrossega-la a l'escena al final del recorregut.
+* Demana al profe la mecànica de "tocar la bandera = guanyar" (mira el document de **Mecàniques** a la web).
 
 ### Idees per al teu nivell
-- Camí de plataformes que cauen (has d'anar ràpid!).
-- Monedes amagades en llocs difícils.
-- Salts que necessiten el **doble salt** sí o sí.
-- Plataformes mòbils, molles que et llancen amunt, zones de perill... (mira el banc de mecàniques).
+* Camí de plataformes que cauen (has d'anar ràpid!).
+* Monedes amagades en llocs difícils.
+* Salts que necessiten el **doble salt** o el **sprint** sí o sí.
+* Plataformes mòbils, molles que et llancen amunt, zones de perill... (mira el banc de mecàniques de la web).
 
 > 🏆 Al final intercanviarem els projectes i jugarem els nivells dels companys. Fes-lo divertit però possible!
 

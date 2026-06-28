@@ -31,7 +31,30 @@
   .meta .desc { color: #94a3b8; font-size: .85rem; }
   .row { display: flex; flex-wrap: wrap; gap: 12px; }
   .row a.card { flex: 1 1 240px; margin-bottom: 0; }
-  .tip { margin: 28px 0 8px; color: #94a3b8; font-size: .82rem; text-align: center; }
+  .tip { margin: 8px 0; color: #94a3b8; font-size: .82rem; text-align: center; }
+  .footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border-top: 1px solid #334155;
+    text-align: center;
+  }
+  .github-text {
+    margin: 16px 0 0;
+    font-size: 0.9rem;
+  }
+  .github-text a {
+    color: #38bdf8;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s;
+  }
+  .github-text a:hover {
+    color: #7dd3fc;
+    text-decoration: underline;
+  }
 </style>
 </head>
 <body>
@@ -73,21 +96,54 @@
       </a>
       <a class="card" href="https://github.com/christt105/CITMGameWorkshop/releases/download/v2026/Platformer3D-2026.zip">
         <span class="emoji">🧱</span>
-        <span class="meta"><div class="title">Platformer3D-2026.zip</div><div class="desc">Importa amb Godot 4.6</div></span>
+        <span class="meta"><div class="title">Platformer3D-2026.zip</div><div class="desc">Importa amb Godot 4.7</div></span>
       </a>
     </div>
 
-    <h2>Guies (si t'encalles)</h2>
-    <a class="card" href="https://github.com/christt105/CITMGameWorkshop/blob/main/flappy-bird/GUIA.md">
-      <span class="emoji">📖</span>
-      <span class="meta"><div class="title">Guia Flappy Bird</div><div class="desc">Tot el codi pas a pas</div></span>
-    </a>
-    <a class="card" href="https://github.com/christt105/CITMGameWorkshop/blob/main/platformer-3d/GUIA.md">
-      <span class="emoji">📖</span>
-      <span class="meta"><div class="title">Guia Plataformes 3D</div><div class="desc">Tot el codi pas a pas</div></span>
-    </a>
+    <h2>Descarrega els Motors (per a casa)</h2>
+    <div class="row">
+      <a class="card" href="https://unity.com/download" target="_blank">
+        <span class="emoji">🎮</span>
+        <span class="meta"><div class="title">Unity Hub</div><div class="desc">Descarrega Unity per instal·lar a casa</div></span>
+      </a>
+      <a class="card" href="https://godotengine.org/download" target="_blank">
+        <span class="emoji">🤖</span>
+        <span class="meta"><div class="title">Godot Engine 4.7</div><div class="desc">Descarrega Godot (lliure i de franc)</div></span>
+      </a>
+    </div>
 
-    <p class="tip">Toca una presentació. Dins, fes servir les fletxes ◀ ▶ o l'espai per avançar.</p>
+    <h2>Guies i Mecàniques</h2>
+    <div class="row">
+      <a class="card" href="viewer.html?g=flappy-bird-guia">
+        <span class="emoji">📖</span>
+        <span class="meta"><div class="title">Guia Flappy Bird</div><div class="desc">Pas a pas (Dia 1 i 2)</div></span>
+      </a>
+      <a class="card" href="viewer.html?g=flappy-bird-funcions">
+        <span class="emoji">🛠️</span>
+        <span class="meta"><div class="title">Funcions Flappy Bird</div><div class="desc">Mecàniques extra (Dia 2)</div></span>
+      </a>
+    </div>
+    <div class="row" style="margin-top: 12px;">
+      <a class="card" href="viewer.html?g=platformer-guia">
+        <span class="emoji">📖</span>
+        <span class="meta"><div class="title">Guia Plataformes 3D</div><div class="desc">Pas a pas (Dia 3 i 4)</div></span>
+      </a>
+      <a class="card" href="viewer.html?g=platformer-mecaniques">
+        <span class="emoji">🧱</span>
+        <span class="meta"><div class="title">Mecàniques Godot 3D</div><div class="desc">Mecàniques extra (Dia 4)</div></span>
+      </a>
+    </div>
+
+    <div class="footer">
+      <p class="tip">Toca una presentació. Dins, fes servir les fletxes ◀ ▶ o l'espai per avançar.</p>
+      <p class="github-text">
+        <a href="https://github.com/christt105/CITMGameWorkshop" target="_blank">
+          <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: middle; margin-right: 6px; display: inline-block;">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+          </svg>Veure codi a GitHub (Repositori Principal)
+        </a>
+      </p>
+    </div>
   </div>
 </body>
 </html>
