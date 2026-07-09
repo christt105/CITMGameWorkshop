@@ -47,7 +47,7 @@ import glob, re
 for f in glob.glob('$FD/FlappyBirdWorkshop/Assets/Scripts/**/*.cs', recursive=True):
     with open(f, 'r', encoding='utf-8') as file:
         content = file.read()
-    content = re.sub(r'[ \t]*// <SOL>.*?[ \t]*// </SOL>\n?', '', content, flags=re.DOTALL)
+    content = re.sub(r'([ \t]*)// <SOL>.*?[ \t]*// </SOL>\n?', r'\1\n', content, flags=re.DOTALL)
     with open(f, 'w', encoding='utf-8') as file:
         file.write(content)
 "
@@ -64,7 +64,7 @@ import glob, re
 for f in glob.glob('$PF/**/*.gd', recursive=True):
     with open(f, 'r', encoding='utf-8') as file:
         content = file.read()
-    content = re.sub(r'[ \t]*# <SOL>.*?[ \t]*# </SOL>\n?', '', content, flags=re.DOTALL)
+    content = re.sub(r'([ \t]*)# <SOL>.*?[ \t]*# </SOL>\n?', r'\1\n', content, flags=re.DOTALL)
     with open(f, 'w', encoding='utf-8') as file:
         file.write(content)
 "
