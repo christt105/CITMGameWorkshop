@@ -21,7 +21,7 @@ func _ready():
 	camera_rotation = rotation_degrees # Initial rotation
 	
 	pass
-
+	
 func _physics_process(delta):
 	
 	# Set position and rotation to targets
@@ -32,7 +32,7 @@ func _physics_process(delta):
 	camera.position = camera.position.lerp(Vector3(0, 0, zoom), 8 * delta)
 	
 	handle_input(delta)
-
+	
 # Handle input
 
 func handle_input(delta):

@@ -34,7 +34,7 @@ func _ready():
 			speed = randf_range(100, 150)
 		AsteroidSize.SMALL:
 			speed = randf_range(100, 200)
-
+	
 func _physics_process(delta):
 	global_position += movement_vector.rotated(rotation) * speed * delta
 	
@@ -48,11 +48,11 @@ func _physics_process(delta):
 		global_position.x = (screen_size.x+radius)
 	elif (global_position.x-radius) > screen_size.x:
 		global_position.x = -radius
-
+	
 func explode():
 	exploded.emit(global_position, size, points)
 	queue_free()
-
+	
 func _on_body_entered(body):
 	if body is Player:
 		var player = body

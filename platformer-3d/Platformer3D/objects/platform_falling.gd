@@ -20,9 +20,9 @@ func _process(delta):
 	
 	if position.y < -10:
 		queue_free() # Remove platform if below threshold
-
-
-
+	
+	
+	
 func _on_body_entered(_body):
 	if !falling:
 		Audio.play("res://sounds/fall.ogg") # Play sound

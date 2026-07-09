@@ -27,7 +27,7 @@ func _process(delta):
 			shoot_laser()
 			await get_tree().create_timer(rate_of_fire).timeout
 			shoot_cd = false
-
+	
 func _physics_process(delta):
 	if !alive: return
 	
@@ -55,21 +55,21 @@ func _physics_process(delta):
 		global_position.x = screen_size.x
 	elif global_position.x > screen_size.x:
 		global_position.x = 0
-
+	
 func shoot_laser():
 	var l = laser_scene.instantiate()
 	l.global_position = muzzle.global_position
 	l.rotation = rotation
 	laser_shot.emit(l)
-
+	
 func die():
 	if alive==true:
 		alive = false
 		sprite.visible = false
 		cshape.set_deferred("disabled", true)
 		died.emit()
-		
-
+	
+	
 func respawn(pos):
 	if alive==false:
 		alive = true
