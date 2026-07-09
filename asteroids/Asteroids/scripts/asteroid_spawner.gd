@@ -16,12 +16,12 @@ func _ready() -> void:
 	for i in range(5):
 		asteroid_spawn_location.progress_ratio = randf()
 		spawn_asteroid(asteroid_spawn_location.global_position, Asteroid.AsteroidSize.LARGE)
-
+	
 func _on_AsteroidSpawnTimer_timeout():
 	asteroid_spawn_location.progress_ratio = randf()
 	spawn_asteroid(asteroid_spawn_location.global_position, Asteroid.AsteroidSize.LARGE)
-
-
+	
+	
 func spawn_asteroid(pos:Vector2, size:Asteroid.AsteroidSize):
 	var asteroid_scene = get_asteroid_scene_by_size(size)
 	if asteroid_scene != null:
@@ -29,7 +29,7 @@ func spawn_asteroid(pos:Vector2, size:Asteroid.AsteroidSize):
 		asteroid.global_position = pos
 		asteroids.call_deferred("add_child", asteroid)
 		asteroid.connect("exploded", _on_asteroid_exploded)
-
+	
 func _on_asteroid_exploded(pos, size, points):
 	$AsteroidHitSound.play()
 	
@@ -43,8 +43,8 @@ func _on_asteroid_exploded(pos, size, points):
 				spawn_asteroid(pos, Asteroid.AsteroidSize.SMALL)
 			Asteroid.AsteroidSize.SMALL:
 				pass
-
-
+	
+	
 func get_asteroid_scene_by_size(size:Asteroid.AsteroidSize) -> PackedScene:
 	var scene = null
 	

@@ -20,24 +20,24 @@ func _ready():
 	player.connect("laser_shot", _on_player_laser_shot)
 	player.connect("died", _on_player_died)
 	asteroid_spawner.asteroid_exploded.connect(_on_asteroid_exploded)
-
-
+	
+	
 func _process(delta):
 	if Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()
-
-
+	
+	
 func _on_player_laser_shot(laser):
 	$LaserSound.play()
 	lasers.add_child(laser)
-
-
+	
+	
 func _on_player_died():
 	$PlayerDieSound.play()
 	player.global_position = player_spawn_pos.global_position
 	await get_tree().create_timer(2).timeout
 	game_over_screen.visible = true
-
-
+	
+	
 func _on_asteroid_exploded(points: int) -> void:
 	score += points

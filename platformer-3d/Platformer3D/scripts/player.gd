@@ -6,8 +6,8 @@ signal coin_collected
 @export var view: Node3D
 
 @export_subgroup("Properties")
-@export var movement_speed = 250
-@export var jump_strength = 7
+@export var movement_speed: float = 250.0
+@export var jump_strength: float = 7.0
 
 var movement_velocity: Vector3
 var rotation_direction: float
@@ -28,82 +28,82 @@ var coins = 0
 # Functions
 
 func _physics_process(delta):
-
+	
 	# Handle functions
-
+	
 	handle_controls(delta)
 	handle_gravity(delta)
-
+	
 	handle_effects(delta)
-
+	
 	# Movement
-
+	
 	var applied_velocity: Vector3
-
+	
 	applied_velocity = velocity.lerp(movement_velocity, delta * 10)
 	applied_velocity.y = -gravity
-
+	
 	velocity = applied_velocity
 	move_and_slide()
-
+	
 	# Rotation
-
+	
 	if Vector2(velocity.z, velocity.x).length() > 0:
 		rotation_direction = Vector2(velocity.z, velocity.x).angle()
-
+	
 	rotation.y = lerp_angle(rotation.y, rotation_direction, delta * 10)
-
+	
 	# Falling/respawning
-
+	
 	if position.y < -10:
 		get_tree().reload_current_scene()
-
+	
 	# Animation for scale (jumping and landing)
-
+	
 	model.scale = model.scale.lerp(Vector3(1, 1, 1), delta * 10)
-
+	
 	# Animation when landing
-
+	
 	if is_on_floor() and gravity > 2 and !previously_floored:
 		model.scale = Vector3(1.25, 0.75, 1.25)
 		Audio.play("res://sounds/land.ogg")
-
+	
 	previously_floored = is_on_floor()
-
+	
 # Handle animation(s)
-
+	
 func handle_effects(delta):
-
+	
 	particles_trail.emitting = false
 	sound_footsteps.stream_paused = true
-
+	
 	if is_on_floor():
 		var horizontal_velocity = Vector2(velocity.x, velocity.z)
 		var speed_factor = horizontal_velocity.length() / movement_speed / delta
 		if speed_factor > 0.05:
 			if animation.current_animation != "walk":
 				animation.play("walk", 0.1)
-
+	
 			if speed_factor > 0.3:
 				sound_footsteps.stream_paused = false
 				sound_footsteps.pitch_scale = speed_factor
-
+	
 			if speed_factor > 0.75:
 				particles_trail.emitting = true
-
+	
 		elif animation.current_animation != "idle":
 			animation.play("idle", 0.1)
 	elif animation.current_animation != "jump":
 		animation.play("jump", 0.1)
-
+	
 # Handle movement input
-
+	
 func handle_controls(delta):
-
+	
 	# Movement
-
+	
 	var input := Vector3.ZERO
-
+	
 	# TODO 1: Agafa el Input del jugador (tecles WASD / fletxes)
 	#   - Llegim els eixos de control horitzontal (X) i vertical (Z) i els assignem a 'input.x' i 'input.z'.
 	#   - Utilitza la funció: Input.get_axis("accio_negativa", "accio_positiva")
@@ -112,12 +112,12 @@ func handle_controls(delta):
 	input.x = Input.get_axis("move_left", "move_right")
 	input.z = Input.get_axis("move_forward", "move_back")
 	# </SOL>
-
+	
 	input = input.rotated(Vector3.UP, view.rotation.y)
-
+	
 	if input.length() > 1:
 		input = input.normalized()
-
+	
 	var speed_multiplier = 1.0
 	# TODO 3: Fes que el jugador corri més ràpid si es prem la tecla Shift (multiplica speed_multiplier per 1.6)
 	#   - Comprova si la tecla Shift es troba premuda utilitzant: Input.is_key_pressed(KEY_SHIFT)
@@ -126,11 +126,11 @@ func handle_controls(delta):
 	if Input.is_key_pressed(KEY_SHIFT):
 		speed_multiplier = 1.6
 	# </SOL>
-
+	
 	movement_velocity = input * movement_speed * speed_multiplier * delta
-
+	
 	# Jumping
-
+	
 	# TODO 2: Si s'apreta el botó de saltar ("jump") crida la funció `jump()`
 	#   - Fes servir un condicional per detectar el botó de salt: if Input.is_action_just_pressed("jump"):
 	#   - Si encara tenim salts disponibles (si la variable 'jump_single' o 'jump_double' són certs),
@@ -140,42 +140,43 @@ func handle_controls(delta):
 		if jump_single or jump_double:
 			jump()
 	# </SOL>
-
+	
 # Handle gravity
-
+	
 func handle_gravity(delta):
-
+	
 	gravity += 25 * delta
-
+	
 	if gravity > 0 and is_on_floor():
-
+	
 		jump_single = true
 		gravity = 0
-
+	
 # Jumping
-
+	
 func jump():
-
+	
 	Audio.play("res://sounds/jump.ogg")
-
+	
 	gravity = -jump_strength
-
+	
 	model.scale = Vector3(0.5, 1.5, 0.5)
-
+	
 	if jump_single:
 		jump_single = false;
 		jump_double = true;
 	else:
 		jump_double = false;
-
+	
 # Collecting coins
-
+	
 # TODO 4: Crea la funció `collect_coin()` que sumi 1 a les monedes (`coins`) i emeti el senyal `coin_collected` passant el número actual
 #   - Crea la funció amb la sintaxi: func collect_coin():
 #   - Incrementa el valor de 'coins' en 1.
 #   - Envia el senyal avisant del canvi de puntuació mitjançant: coin_collected.emit(coins)
-# <SOL>
 func collect_coin():
+	pass
+	# <SOL>
 	coins += 1
 	coin_collected.emit(coins)
-# </SOL>
+	# </SOL>
