@@ -176,7 +176,7 @@ func jump():
 #   - Envia el senyal avisant del canvi de puntuació mitjançant: coin_collected.emit(coins)
 func collect_coin():
 	pass
-# <SOL>
+	# <SOL>
 	coins += 1
 	coin_collected.emit(coins)
-# </SOL>
+	# </SOL>
